@@ -1,0 +1,16 @@
+extends base
+
+block content
+
+  main
+    if orders.length > 0
+      h1 Nothing here!
+    ul.orders
+      each order in orders
+        li.orders__item.centered
+          h1.order_id Order Id: `${order._id}` 
+          ul.orders__products
+            each p in products 
+              li.order_products-item= `${p.title}` (p.quantity)
+          hr
+          a(href=`/orders/${order_id}`) Download Invoice

@@ -1,0 +1,1253 @@
+/* Responsive */
+.hamburger {
+  position: relative;
+  display: block;
+  width: 27px;
+  cursor: pointer;
+
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 6px;
+  background-color: #b12a5be5;
+  margin: 3px 0px;
+  transition: 0.4s;
+  border-radius: 2rem;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-7px, 1px);
+}
+
+.hamburger.is-active:after {
+  /* transform: rotate(45deg) translate(-9px, -8px); */
+  transform: rotate(45deg) translate(-11px, -6px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  z-index: 98;
+  background-image: linear-gradient(to right bottom, #fbdb89e0, #f48a82d9);
+  padding-top: 120px;
+  transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+  right: 0;
+}
+
+.mobile-nav a {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  text-align: center;
+  padding: 12px 16px;
+  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+  font-size: 1.6em;
+  font-weight: 500;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a:active {
+  transition: all .4s ease-in-out;
+  background-image: linear-gradient(to right bottom, #ffad06, #ff1060de);
+}
+
+.button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+
+  display: inline-block;
+  color: #FFF;
+  font-size: 20px;
+  background-color: #FF9FDB;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+.close-cart{
+  display: none;
+}
+
+
+@media only screen and (max-width: 1150px) {
+  .nav_links {
+    margin-right: 8rem;
+  }
+
+  .header {
+    padding: 2.5rem 4rem;
+  }
+
+  .testmonial_slider_area {
+    max-width: 950px;
+  }
+
+  .blob-wobble {
+    width: 390px;
+    height: 390px;
+  }
+
+  .star {
+    margin-left: 15rem;
+  }
+
+  .box .image {
+    margin-left: 11rem;
+  }
+
+  .account-password-toggle {
+    right: 18rem;
+  }
+
+  .reviews {
+    max-width: 1000px;
+  }
+
+  .section-reviews .owl-next {
+    right: -20px;
+    top: -30px;
+  }
+
+  .explore_card {
+    width: 300px;
+    height: 400px;
+  }
+
+  .reviews__card {
+    width: auto;
+  }
+
+  .recipe__ingredients {
+    min-width: 48rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .header {
+    padding: 2.5rem 2rem;
+  }
+  
+  .nav_links {
+    margin-right: 0rem;
+  }
+
+  .nav_links li {
+    padding: 0;
+  }
+  
+  .testmonial_slider_area {
+    max-width: 700px;
+  }
+  
+  .blob-wobble {
+    width: 350px;
+    height: 350px;
+  }
+
+  .fa-hamburger {
+    font-size: 2.5rem;
+  }
+
+  .logo-title {
+    font-size: 2.5rem;
+  }
+
+  .box .image {
+    margin-left: 8rem;
+  }
+
+  .content .imgBx img {
+    width: 350px;
+    height: 340px;
+  }
+
+  .account-password-toggle {
+    right: 14rem;
+  }
+
+  .reviews {
+    max-width: 761px;
+  }
+
+  .explore_imgBx {
+    width: 150px;
+    height: 150px;
+  }
+
+  .recipe-container {
+    grid-gap: 3rem 0;
+    max-width: 87rem;
+  }
+  
+  .explore_card {
+    width: 275px;
+    height: 350px;
+  }
+
+  .add-to-cart,
+  .show_recipe:link,
+  .show_recipe:visited {
+    padding: 1rem 2.5rem;
+    font-size: 1.4rem;
+  }
+  
+  .recipe__instructions {
+    padding: 5rem 3rem;
+  }
+
+  .recipe__ingredients {
+    min-width: 45rem;
+  }
+  
+  .ingredient-pics-2 {
+    margin-left: -68rem;
+  }
+  
+  .recipe-data-btn {
+    margin-top: 26rem;
+  }
+}
+
+@media (min-width: 815px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 815px) {
+  .nav_links {
+    display: none;
+  }
+
+  a.nav__el.log-in {
+    display: none;
+  }
+
+  a.nav__el.nav__el--login {
+    /* margin-left: 36rem; */
+    text-align: center;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+    font-size: 1.6em;
+    font-weight: 500;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 0;
+  }
+
+  .nav__el--logout {
+    display: none;
+  }
+
+  a.nav__el.nav-dashboard-responsive {
+    margin-left: 33rem;
+  }
+
+  .nav__el--logout:hover {
+    border-radius: 0;
+  }
+
+  .nav__el:not(:last-child) {
+    margin-right: auto;
+  }
+
+  a.nav__el.nav-dashboard {
+    display: none;
+  }
+
+  .header {
+    padding: 2.5rem 4rem;
+  }
+
+  /* .header .logo {
+    margin-left: 12rem;
+  } */
+  a.nav__el.nav__el--cta.sign-up {
+    font-size: 1.9rem;
+  }
+
+  .logo-title {
+    font-size: 3rem;
+  }
+
+  .fa-hamburger {
+    font-size: 3rem;
+  }
+  
+  .blob-wobble {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .about-section .container .row {
+    flex-direction: column;
+  }
+
+  .about-section .container .row .about-text {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* flex-direction: row; */
+  }
+  
+  .about-section .container .row .about-text .owners {
+    position: absolute;
+    margin-top: 66rem;
+    margin-left: 3rem;
+  }
+
+  .owners .about_btn {
+    margin-left: 26rem;
+  }
+
+  .our-story,
+  .our-food-items {
+    padding: 0 2rem;
+  }
+
+  .content .imgBx img {
+    width: 305px;
+    height: 300px;
+  }
+  
+  .why-us .content .contentBx {
+    padding-top: 8rem;
+  }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+    margin-top: 2rem;
+  }
+  
+  .logo-col {
+    margin-top: 0;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .box-container .box:nth-child(1) {
+    display: none;
+  }
+  
+  .infoBx {
+    top: 48rem;
+    left: 9rem;
+  }
+
+  .why-us .content .contentBx {
+    padding-top: 11rem;
+  }
+
+  .testmonial_slider_area {
+    max-width: 700px;
+  }
+
+  .hamburger {
+    z-index: 1000;
+  }
+
+  .form__photo-upload {
+    font-size: 1.4rem;
+  }
+
+  .form__user-photo {
+    height: 5.5rem;
+    width: 5.5rem;
+  }
+
+  .btn--small {
+    padding: 1rem 2rem !important;
+    font-size: 1.2rem !important;
+  }
+
+  
+  .reviews {
+    max-width: 645px;
+  }
+
+  .explore_imgBx {
+    width: 200px;
+    height: 180px;
+  }
+
+  .recipe-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    max-width: 87rem;
+  }
+  
+  .explore_card {
+    width: 325px;
+    height: 425px;
+  }
+
+  .add-to-cart,
+  .show_recipe:link,
+  .show_recipe:visited {
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+  }
+  
+  .recipe__ingredients {
+    min-width: 36rem;
+  }
+
+  .ingredient-pics-2 {
+    margin-left: -72rem;
+  }
+  
+  .recipe-data-btn {
+    margin-top: 20rem;
+  }
+
+  .ingredient-pic {
+    width: 8rem;
+    height: 9rem;
+  }
+  .success-img {
+    height: 8rem;
+  }
+  .close-cart {
+    display: block;
+    fill: #b12a5b;
+    font-size: 3.3rem;
+    position: absolute;
+    top: -3rem;
+    left: 31.5rem;
+  }
+}
+
+@media (max-width: 715px) {
+  .testmonial_slider_area {
+    max-width: 550px;
+  }
+  
+  a.nav__el.nav-dashboard-responsive {
+    margin-left: 29rem;
+  }
+
+  .user-view__menu {
+    -webkit-box-flex: 20rem;
+    -ms-flex: 20rem 0 0px;
+    flex: 20rem 0 0;
+  }
+
+  .box-area {
+    min-height: 280px;
+  }
+
+  .star {
+    margin-left: 12rem;
+    margin-top: 7rem;
+  }
+
+  .about-section .container .row .about-text .owners {
+    position: absolute;
+    margin-top: 77rem;
+    margin-left: -3rem;
+  }
+
+  .infoBx {
+    top: 50rem;
+  }
+
+  .content .imgBx img {
+    width: 305px;
+    height: 300px;
+  }
+
+  .main {
+    padding: 9rem 6rem;
+  }
+
+  .why-us .content .contentBx {
+    padding-top: 13rem;
+  }
+
+  h1.main-heading {
+    font-size: 4.5em;
+  }
+  
+  .account-password-toggle {
+    top: 72%;
+  }
+  
+  .reviews {
+    max-width: 540px;
+  }
+
+  .explore_imgBx {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .recipe-container {
+    grid-gap: 3rem 0;
+    max-width: 87rem;
+  }
+  
+  .explore_card {
+    width: 275px;
+    height: 350px;
+  }
+
+  .add-to-cart,
+  .show_recipe:link,
+  .show_recipe:visited {
+    padding: .9rem 2.2rem;
+    font-size: 1.4rem;
+  }
+
+  .recipe__ingredient-list {
+    font-size: 1.6rem;
+  }
+
+  .recipe__directions-text {
+    font-size: 1.6rem;
+  }
+
+  .recipe-heading--2 {
+    font-size: 1.9rem;
+  }
+
+  .recipe__info-icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .recipe__info-text,
+  .recipe__info-data--author,
+  .recipe__info-data--author {
+    font-size: 1.5rem;
+  }
+  
+  .recipe-svg {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .recipe__ingredients {
+    min-width: 28rem;
+  }
+
+  .ingredient-pics-2 {
+    margin-left: -79rem;
+  }
+  
+  /* .recipe-data-btn {
+    margin-top: 20rem;
+  } */
+}
+
+@media (max-width: 600px) {
+
+  .landing-area {
+    flex-direction: column-reverse;
+  }
+  
+  a.nav__el.nav-dashboard-responsive {
+    margin-left: 23rem;
+  }
+
+  .main .content .contentBx {
+    padding-top: 12rem;
+  }
+  
+  .why-us .content .contentBx {
+    padding-top: 3rem;
+  }
+
+  .infoBx {
+    top: 43rem;
+    left: 4.5rem;
+    width: 490px;
+  }
+
+  .infoBx img {
+    width: 97px;
+    height: 90px;
+    margin: 0;
+  }
+
+  .main {
+    padding: 6rem 6rem;
+    padding-bottom: 9rem;
+  }
+
+  .testmonial_slider_area {
+    max-width: 490px;
+  }
+
+  /* .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  } */
+  .special h1 {
+    text-align: center;
+  }
+
+  .box-container {
+    width: 500px;
+  }
+
+  .box-container .box {
+    height: 250px;
+  }
+
+  .box-container .box .content h2 {
+    text-align: center;
+  }
+
+  .owners .about_btn {
+    margin-left: 14rem;
+  }
+  
+  .about-section .container .row .about-text .owners {
+    position: absolute;
+    margin-top: 90rem;
+    margin-left: 0;
+  }
+  
+  .about-text {
+    flex-direction: column;
+  }
+
+  .user-view {
+    flex-direction: column;
+  }
+
+  .side-nav {
+    display: flex;
+  }
+
+  .side-nav a:link,
+  .side-nav a:visited {
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  .account-main {
+    padding: 60px 30px 60px 30px;
+  }
+
+  .account-password-toggle {
+    top: 78%;
+  }
+
+  .reviews {
+    max-width: 420px;
+  }
+  
+  .explore_imgBx {
+    width: 125px;
+    height: 125px;
+  }
+  
+  .recipe-container {
+    grid-gap: 3rem 0;
+    max-width: 60rem;
+  }
+  
+  .explore_card {
+    width: 238px;
+    height: 320px;
+  }
+  
+  .explore_card .content .details span {
+    font-size: 1.4em;
+  }
+  
+  .explore_card .content .details h2 {
+    font-size: 1.9em;
+  }
+  
+  .add-to-cart,
+  .show_recipe:link,
+  .show_recipe:visited {
+    padding: .9rem 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .recipe__instructions {
+    padding: 5rem 7rem;
+  }
+  
+  .recipe_main {
+    flex-direction: column;
+  }
+  
+  .ingredient-pics-container {
+    column-gap: 64rem;
+  }
+  
+  .ingredient-pics-2 {
+    margin-left: -72rem;
+    flex-direction: column-reverse;
+    margin-top: 70rem;
+  }
+  
+  .recipe__details {
+    flex-direction: column;
+  }
+  
+  .recipe-authors {
+    margin-top: 1rem;
+    margin-right: 16rem;
+  }
+  
+  .recipe__title {
+    font-size: 3rem;
+  }
+  .success-img {
+    height: 6rem;
+  }
+  .success-title span{
+    font-size: 3rem;
+  }
+  .success-message {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .infoBx img:nth-child(2) {
+    display: none;
+  }
+
+  a.nav__el.nav-dashboard-responsive {
+    margin-left: 18rem;
+  }
+
+  .toggleCart {
+    font-size: 15px;
+  }
+
+  a.nav__el.nav__el--cta.sign-up {
+    padding: 0;
+    margin-top: 1.2rem;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .testmonial_slider_area {
+    max-width: 390px;
+  }
+
+  .box-area {
+    max-width: 43rem;
+  }
+
+  .about-section .container .row .about-text .owners {
+    position: absolute;
+    margin-top: 83rem;
+    margin-left: 16px;
+  }
+
+  .owners .about_btn {
+    margin-left: 8rem;
+  }
+
+  .infoBx {
+    width: 390px;
+  }
+
+  .box-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    width: 400px;
+  }
+
+  .box-container .box:nth-child(1) {
+    display: block;
+  }
+
+  .box-container .box .image {
+    margin-left: 15rem;
+  }
+
+  .why-us .content .contentBx h1 {
+    text-align: center;
+  }
+
+  .special {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  .blob-wobble {
+    width: 275px;
+    height: 275px;
+  }
+
+  .about-img {
+    padding-right: 22rem;
+  }
+
+  .our-story,
+  .our-food-items,
+  .about-text,
+  .about-section .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .contacts {
+    font-size: 1.8rem;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.7rem;
+  }
+
+
+  .social-icon {
+    font-size: 2.4rem;
+  }
+
+  .copyright {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  .address {
+    font-size: 1.7rem;
+  }
+
+  .side-nav li:nth-child(3) {
+    display: none;
+  }
+
+  .account-password-toggle {
+    right: 11rem;
+  }
+
+  .contact-section {
+    margin-top: 2rem;
+  }
+
+  .dish_name .heading-box .heading-primary {
+    font-size: 4.5rem;
+  }
+
+  .reviews {
+    max-width: 365px;
+  }
+
+  .explore_imgBx {
+    width: 150px;
+    height: 150px;
+  }
+
+  .recipe-container {
+    grid-gap: 3rem 0;
+    max-width: 87rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .explore_card {
+    width: 275px;
+    height: 350px;
+  }
+
+  .add-to-cart,
+  .show_recipe:link,
+  .show_recipe:visited {
+    padding: .9rem 2.2rem;
+    font-size: 1.4rem;
+  }
+
+  .explore_card .content .details span {
+    font-size: 1.4em;
+  }
+
+  .explore_card .content .details h2 {
+    font-size: 1.9em;
+  }
+
+  .recipe__ingredients {
+    max-width: 45rem;
+  }
+
+  .recipe__instructions,
+  .recipe__ingredients {
+    padding: 5rem 5rem 5rem 5rem;
+  }
+
+  .recipe-authors {
+    margin-top: 1rem;
+    margin-right: 0;
+  }
+
+  .recipe-responsive {
+    padding-left: 7rem;
+  }
+
+  .success-img {
+    height: 5rem;
+  }
+  .success-title span{
+    font-size: 2.8rem;
+  }
+  .success-message {
+    font-size: 1.5rem;
+  }
+  .success-screen-body {
+    flex: 1;
+    padding: 2rem 6rem 3rem 6rem;
+  }
+  .login-form{
+    padding: 5rem 5rem;
+  }
+  .chat{
+    width: 260px;
+    right: -108px;
+    top: 42%;
+    height: 60vh;
+  }
+}
+
+@media (max-width: 440px) {
+  a.nav__el.nav__el--cta.sign-up {
+    font-size: 1.8rem;
+  }
+
+  .infoBx img:nth-child(3) {
+    display: none;
+  }
+
+  a.nav__el.nav-dashboard-responsive {
+    margin-left: 15rem;
+  }
+
+  .infoBx {
+    width: 300px;
+    left: 6.5rem;
+  }
+
+  .about-section .container .row .about-text .owners {
+    position: absolute;
+    margin-top: 88rem;
+    margin-left: 16px;
+  }
+
+  .owners .about_btn {
+    margin-left: 2rem;
+  }
+
+  .testmonial_slider_area {
+    max-width: 315px;
+  }
+
+  .contacts {
+    font-size: 1.6rem;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.6rem;
+  }
+
+  .social-icon {
+    font-size: 2rem;
+  }
+
+  .footer-logo .logo {
+    height: 5.2rem;
+  }
+
+  .toggleCart {
+    font-size: 14px;
+  }
+
+  .about-img {
+    padding-right: 28rem;
+  }
+
+  .font-link {
+    word-wrap: break-word;
+  }
+
+  .cart-box img {
+    height: 8rem;
+    width: 9rem;
+  }
+
+  .cart .cart-box .content h3 {
+    font-size: 1.5em;
+  }
+
+  .cart .cart-box .content span {
+    font-size: 1.5em;
+  }
+
+  .cart-total .total {
+    font-size: 1.8em;
+  }
+
+  .cart-items {
+    max-width: 30rem;
+  }
+
+  .hamburger .bar,
+  .hamburger:after,
+  .hamburger:before {
+    height: 5px;
+  }
+
+  .hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-6px, 2px);
+  }
+
+  .hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -6px);
+  }
+
+  .account-password-toggle {
+    top: 78.5%;
+  }
+
+  .reviews {
+    max-width: 350px;
+  }
+
+  .recipe__fig {
+    height: 30rem;
+  }
+
+  .recipe__instructions,
+  .recipe__ingredients {
+    padding: 5rem 3rem 5rem 5rem;
+  }
+
+  .recipe__ingredients,
+  .recipe__instructions {
+    max-width: 45rem;
+  }
+  .login-form{
+    padding: 5rem 3rem;
+  }
+  .toggle{
+    right: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  a.nav__el.nav__el--cta.sign-up {
+    font-size: 1.7rem;
+  }
+
+  h1.main-heading {
+    font-size: 4.3em !important;
+  }
+
+  a.nav__el.nav-dashboard-responsive {
+    margin-left: 13rem;
+  }
+
+  .box-container .box {
+    max-width: 300px;
+    margin-left: 50px;
+    margin-right: 26px;
+  }
+
+  .box-container .box .image {
+    margin-left: 12rem;
+  }
+
+  .box-container {
+    width: 350px;
+  }
+
+  .blob-wobble {
+    width: 250px;
+    height: 250px;
+  }
+
+  .img-area {
+    height: 80px;
+    width: 80px;
+  }
+
+  .about-section .container .row .about-text .owners {
+    position: absolute;
+    margin-top: 92rem;
+    margin-left: -8px;
+  }
+
+  .owners .about_btn {
+    margin-left: 2rem;
+  }
+
+  .about-section .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .testmonial_slider_area {
+    max-width: 300px;
+  }
+
+  .btn--small {
+    font-size: 1rem !important;
+  }
+
+  .cart-items {
+    max-width: 27rem;
+  }
+
+  .logo .fa-hamburger {
+    display: none;
+  }
+
+  main.main.account-main {
+    padding: 10px 30px 60px 10px;
+  }
+
+  .account-password-toggle {
+    top: 78%;
+  }
+
+  .reviews {
+    max-width: 350px;
+  }
+
+  .reviews__card {
+    min-height: 25rem;
+  }
+
+  .recipe-data-btn {
+    margin-top: 12rem;
+  }
+
+  .recipe__info:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+
+  .recipe-responsive {
+    padding-left: 3rem;
+  }
+
+  .recipe__fig {
+    height: 27rem;
+  }
+
+  .recipe__title {
+    font-size: 2.5rem;
+  }
+
+  .ingredient-pic {
+    width: 6rem;
+    height: 6rem;
+  }
+  .ingredient-pics-2 {
+    margin-left: -70rem;
+  }
+  .success-img {
+    height: 5rem;
+  }
+  .success-title span{
+    font-size: 2.5rem;
+  }
+  .success-screen-body {
+    flex: 1;
+    padding: 2rem 2rem 3rem 2rem;
+  }
+  .login-form{
+    padding: 5rem 2rem;
+  }
+  .user-form__label {
+    font-size: 15px;
+  }
+  .toggle {
+    top: 49%;
+    width: 27px;
+    height: 27px;
+  }
+}
+
+@media (max-width: 365px) {
+  a.nav__el.nav__el--cta.sign-up {
+    font-size: 1.5rem;
+  }
+
+  .logo-title {
+    font-size: 2.6rem;
+  }
+
+  .infoBx {
+    width: 290px;
+    left: 4.4rem;
+  }
+
+  .about-section .container .row .about-text .owners {
+    position: absolute;
+    margin-top: 102rem;
+    margin-left: -40px;
+  }
+
+  .account-main {
+    padding: 0 30px 60px 0;
+  }
+
+  /* .side-nav a:link,
+  .side-nav a:visited {
+    font-size: 1.1rem;
+  } */
+}

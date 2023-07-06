@@ -1,0 +1,220 @@
+[
+  {
+    "_id": "6482fc4d336ab602e49bad1a",
+    "name": "American",
+    "dishes": ["6481d2917e3cfb5ba0ae03d7", "6481d2917e3cfb5ba0ae03d8","6481d2917e3cfb5ba0ae03d6","6481d2917e3cfb5ba0ae03d5","6481d2917e3cfb5ba0ae03da","6481d2917e3cfb5ba0ae03d9"],
+    "summary": "Discover the mouthwatering allure of American cuisine, where bold flavors reign!",
+    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "imageCover": "americanCover.jpg",
+    "testimonials": {
+      "author": "Sophie Louise",
+      "date": "21.02.2023",
+      "author_image": "user-3.jpg",
+      "rating": ["star", "star", "star","star", "star-half"],
+      "message": "The recipes on this website are absolutely delicious! I've tried several and they never disappoint. Highly recommended!"
+    }
+  },
+  {
+    "_id": "6482fc4d336ab602e49bad1b",
+    "name": "Korean",
+    "dishes": [
+      "6481d2917e3cfb5ba0ae03db",
+      "6481d2917e3cfb5ba0ae03dc",
+      "6481d2917e3cfb5ba0ae03dd",
+      "6481d2917e3cfb5ba0ae03de",
+      "6481d2917e3cfb5ba0ae03df",
+      "6481d2917e3cfb5ba0ae03e0"
+    ],
+    "summary": "Experience the tantalizing flavors of Korea's culinary treasures, a feast for the senses.",
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "imageCover": "koreanCover.jpg",
+    "testimonials": {
+      "author": "Phaham Khan",
+      "date": "21.06.2023",
+      "author_image": "user-pk.jpg",
+      "rating": ["star", "star", "star","star", "star"],
+      "message": "This foodie website is my culinary secret weapon! It's like having a personal chef and a global buffet at my fingertips."
+    }
+  },
+  {
+    "_id": "6482fc4d336ab602e49bad1c",
+    "name": "French",
+    "dishes": [
+      "6481d2917e3cfb5ba0ae03e1",
+      "6481d2917e3cfb5ba0ae03e2",
+      "6481d2917e3cfb5ba0ae03e3",
+      "6481d2917e3cfb5ba0ae03e4",
+      "6481d2917e3cfb5ba0ae03e5",
+      "6481d2917e3cfb5ba0ae03e6"
+    ],
+    "summary": "Savor the divine flavors of French cuisine, a symphony of culinary delight.",
+    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
+    "imageCover": "frenchCover.jpeg",
+    "testimonials": {
+      "author": "Leo Gillespie",
+      "date": "11.05.2023",
+      "author_image": "user-5.jpg",
+      "rating": ["star", "star", "star","star", "star-half"],
+      "message": "Finally, a user-friendly platform that satisfies both my cravings and curiosity about global cuisines. Love it!"
+    }
+  },
+  {
+    "_id": "6482fc4d336ab602e49bad1d",
+    "name": "Japanese",
+    "dishes": [
+      "6481d2917e3cfb5ba0ae03e8",
+      "6481d2917e3cfb5ba0ae03e7",
+      "6481d2917e3cfb5ba0ae03e9",
+      "6481d2917e3cfb5ba0ae03ea",
+      "6481d2917e3cfb5ba0ae03eb",
+      "6481d2917e3cfb5ba0ae03ec"
+    ],
+    "summary": "Experience the captivating harmony of Japanese cuisine, a feast for your senses!",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!",
+    "imageCover": "japaneseCover.jpg",
+    "testimonials": {
+      "author": "Jennifer Hardy",
+      "date": "12.04.2023",
+      "author_image": "user-6.jpg",
+      "rating": ["star", "star", "star","star", "star-half"],
+      "message":"The recipe collection on this website is diverse and mouthwatering. I've already tried several dishes and they were all fantastic."
+    }
+  },
+  {
+    "_id": "6482fc4d336ab602e49bad1e",
+    "name": "Turkish",
+    "dishes": ["6481d2917e3cfb5ba0ae03ed", "6481d2917e3cfb5ba0ae03ee","6481d2917e3cfb5ba0ae03ef","6481d2917e3cfb5ba0ae03f0","6481d2917e3cfb5ba0ae03f1","6481d2917e3cfb5ba0ae03f2"],
+    "summary": "Get ready to savor a Turkish delight! Experience a vibrant explosion of flavors.",
+    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet.\nConsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat!",
+    "imageCover": "turkishCover.jpg",
+    "testimonials": {
+      "author": "Ajmal Ansari",
+      "date": "20.03.2023",
+      "author_image": "user-integral.jpg",
+      "rating": ["star", "star", "star","star", "star"],
+      "message": "I can't believe I discovered this website! It's a treasure trove of flavors and culinary inspiration. Five stars!"
+    }
+  },
+  {
+    "_id": "6482fc4d336ab602e49bad1f",
+    "name": "Italian",
+    "dishes": [
+      "6481d2917e3cfb5ba0ae03f3",
+      "6481d2917e3cfb5ba0ae03f4",
+      "6481d2917e3cfb5ba0ae03f5",
+      "6481d2917e3cfb5ba0ae03f7",
+      "6481d2917e3cfb5ba0ae03f6",
+      "6481d2917e3cfb5ba0ae03f8"
+    ],
+    "summary": "Embrace the flavorful zest of Italy, where each bite sings symphonies!",
+    "description": "Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nVoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur!",
+    "imageCover": "italianCover.jpg",
+    "testimonials": {
+      "author": "Sanober Rizwan",
+      "date": "19.05.2023",
+      "author_image": "user-sanob.jpg",
+      "rating": ["star", "star", "star","star", "star"],
+      "message": "Who needs a passport when you have this website? It's a mouthwatering adventure around the world, right from my couch!"
+    }
+  },
+  {
+    "_id": "6482fc4d336ab602e49bad20",
+    "name": "Chinese",
+    "dishes": [
+      "6481d2917e3cfb5ba0ae03f9", "6481d2917e3cfb5ba0ae03fa","6481d2917e3cfb5ba0ae03fc",
+      "6481d2917e3cfb5ba0ae03fb","6481d2917e3cfb5ba0ae03fd","6481d2917e3cfb5ba0ae03fe"
+    ],
+    "summary": "Get ready for a thrilling flavor adventure with tantalizing Chinese delicacies!",
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "imageCover": "chineseCover.jpg",
+    "testimonials": {
+      "author": "Aaarav Lynn",
+      "date": "24.04.2023",
+      "author_image": "user-11.jpg",
+      "rating": ["star", "star", "star","star", "star-half"],
+      "message": "The recipe collection on this website is diverse and mouthwatering. I've already tried several dishes and they were all fantastic."
+    }
+  },
+  {
+    "_id": "6482fc4d336ab602e49bad21",
+    "name": "Spanish",
+    "dishes": [
+      "6481d2917e3cfb5ba0ae03ff",
+      "6481d2917e3cfb5ba0ae0401",
+      "6481d2917e3cfb5ba0ae0400",
+      "6481d2917e3cfb5ba0ae0403",
+      "6481d2917e3cfb5ba0ae0402",
+      "6481d2917e3cfb5ba0ae0404"
+    ],
+    "summary": "Get ready to flamenco your taste buds with the vibrant flavors of Spanish cuisine!",
+    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
+    "imageCover": "spanishCover.jpg",
+    "testimonials": {
+      "author": "Yusra Khan",
+      "date": "21.02.2023",
+      "author_image": "user-yuss.jpg",
+      "rating": ["star", "star", "star","star", "star"],
+      "message": "This website is a food lover's dream come true! It's like having a food festival delivered to my doorstep every time I visit."
+    }
+  },
+  {
+    "_id": "5c88fa8cf4afda39709c296c",
+    "name": "Russian",
+    "dishes": ["6481d2917e3cfb5ba0ae0406", "6481d2917e3cfb5ba0ae0405","6481d2917e3cfb5ba0ae0407","6481d2917e3cfb5ba0ae0408","6481d2917e3cfb5ba0ae040a","6481d2917e3cfb5ba0ae0409"],
+    "summary": "Unleash your taste buds with a Russian food extravaganza, a delightful voyage for your senses!",
+    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "imageCover": "russianCover.jpg",
+    "testimonials": {
+      "author": "Ben Hadley",
+      "date": "21.04.2023",
+      "author_image": "user-13.jpg",
+      "rating": ["star", "star", "star","star", "star-half"],
+      "message": "Whether I'm ordering takeout or trying a new recipe, this website has become my culinary companion. I can't imagine life without it!"
+    }
+  },
+  {
+    "_id": "6482fc4d336ab602e49bad23",
+    "name": "Thai",
+    "dishes": ["6481d2917e3cfb5ba0ae040b", "6481d2917e3cfb5ba0ae040c","6481d2917e3cfb5ba0ae040e","6481d2917e3cfb5ba0ae040d","6481d2917e3cfb5ba0ae0410","6481d2917e3cfb5ba0ae040f"],
+    "summary": "Unleash your taste buds with the vibrant and tantalizing flavors of Thai cuisine.",
+    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "imageCover": "thaiCover.jpg",
+    "testimonials": {
+      "author": "Alexander Jones",
+      "date": "22.05.2023",
+      "author_image": "user-17.jpg",
+      "rating": ["star", "star", "star","star", "star-half"],
+      "message": "The recipes on this website are absolutely delicious! I've tried several and they never disappoint. Highly recommended!"
+    }
+  },
+  {
+    "_id": "6482fc4d336ab602e49bad24",
+    "name": "North Indian",
+    "dishes": ["6481d2917e3cfb5ba0ae0411", "6481d2917e3cfb5ba0ae0412","6481d2917e3cfb5ba0ae0413","6481d2917e3cfb5ba0ae0414","6481d2917e3cfb5ba0ae0415","6481d2917e3cfb5ba0ae0416"],
+    "summary": "Experience the tantalizing flavors of North India, a culinary symphony of spices.",
+    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "imageCover": "img1.webp",
+    "testimonials": {
+      "author": "John Riley",
+      "date": "21.05.2023",
+      "author_image": "user-19.jpg",
+      "rating": ["star", "star", "star","star", "star-half"],
+      "message": "I'm impressed by the attention to detail and security measures taken on this website. It's a trustworthy platform for food lovers like me."
+    }
+  },
+  {
+    "_id": "6482fc4d336ab602e49bad25",
+    "name": "South Indian",
+    "dishes": ["6481d2917e3cfb5ba0ae0417", "6481d2917e3cfb5ba0ae0418","6481d2917e3cfb5ba0ae041a","6481d2917e3cfb5ba0ae0419","6481d2917e3cfb5ba0ae041b","6481d2917e3cfb5ba0ae041c"],
+    "summary": "Delight in the rich flavors of South India, a taste adventure awaits!",
+    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "imageCover": "south-indianCover.jpg",
+    "testimonials": {
+      "author": "Max Smith",
+      "date": "21.05.2023",
+      "author_image": "user-15.jpg",
+      "rating": ["star", "star", "star","star", "star-half"],
+      "message": "I love exploring different cuisines, and this website has become my go-to resource. It's a food lover's paradise!" 
+    }
+  }
+]

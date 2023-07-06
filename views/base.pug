@@ -1,0 +1,147 @@
+doctype html
+html
+    head
+        block head
+            meta(charset="UTF-8")
+            meta(name="viewport" content="width=device-width, initial-scale=1.0")
+            title BoogieBites | #{title}
+            link(rel="stylesheet" href="/css/style.css")
+            link(rel="stylesheet" href="/css/style2.css")
+            link(rel="stylesheet" href="/css/chat_style.css")
+            link(rel="stylesheet" href="/css/responsive.css")
+
+            link(rel="shortcut icon" type="image/png" href="/img/favicon2.png")
+            link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,700")
+            <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+            <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+            //- ////////////////////////////////////
+            script(src='https://js.stripe.com/v3/', defer)
+            script(src="/socket.io/socket.io.js", defer)
+
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+
+            script(src="/js/responsive.js", defer)
+            script(src="/js/order.js", defer)
+            script(src="/js/landing.js", defer)
+            script(src="/js/chat.js", defer)
+            
+            //- script.
+            //-   document.querySelector('.bn632-hover').addEventListener('click', ()=>{
+            //-     showAlert("success", "Message sent successfully!");
+            //-     })
+            //- ////////////////////////////////////
+
+            meta(name="robots" content="noindex")
+            meta(name="googlebot" content="noindex")
+
+    body(data-alert=`${alert ? alert : ''}`)
+
+        //- if user 
+        //-     script.
+        //-         var username = "#{user.name}";
+        //-         var userphoto = "#{user.photo}";
+        //-         user_access(username,userphoto);
+
+        // HEADER
+        include _header
+
+        // CONTENT
+        block content
+            main.main
+                h1 This is a placeholder
+
+        // FOOTER
+        include _footer
+
+        // CHAT
+        include chat
+        //- script(src='/js/mapbox.js')
+        //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
+        //- script(src='/js/login.js')
+
+        //- script(src='https://js.stripe.com/v3/')
+        //- script(src='/js/order.js')
+        script(src='/js/bundle.js')
+
+        script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule='' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+        //- script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js')
+        script(src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.1.1/dist/index.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js")
+
+
+        script.
+            function checkNetworkStatus() {
+                var isOnline = navigator.onLine;
+
+                if (!isOnline) {
+                    window.location.href = "/404.pug"; // Replace with the actual URL of your custom 404 page
+                }
+            }
+            window.addEventListener("load", checkNetworkStatus);
+
+        script.
+            AOS.init({
+                duration: 800,
+                delay: 400,
+            })
+        script.
+            $(".testmonial_slider_area").owlCarousel({
+                autoplay: true,
+                slideSpeed: 1000,
+                //- items: 3,
+                loop: true,
+                nav: true,
+                navText: ['<i class="fa fa-arrow-left"></i>', '<i class="fa fa-arrow-right"></i>'],
+                margin: 30,
+                dots: true,
+                responsive: {
+                    320: {
+                    items: 1
+                    },
+                    767: {
+                    items: 2
+                    },
+                    600: {
+                    items: 2
+                    },
+                    1000: {
+                    items: 3
+                    }
+                }
+            });
+            $(".reviews").owlCarousel({
+                 autoplay: true,
+                slideSpeed: 1000,
+                items: 3,
+                loop: true,
+                nav: true,
+                navText: ['<i class="fa fa-arrow-left"></i>', '<i class="fa fa-arrow-right"></i>'],
+                margin: 30,
+                dots: true,
+                responsive: {
+                    320: {
+                    items: 1
+                    },
+                    767: {
+                    items: 2
+                    },
+                    600: {
+                    items: 2
+                    },
+                    1000: {
+                    items: 3
+                    }
+                }
+            });
+
+

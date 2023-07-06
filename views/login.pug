@@ -1,0 +1,16 @@
+extends base
+
+block content
+  main.main
+    .login-form
+      h2.heading-secondary.ma-bt-lg Log in
+      form.form.form--login
+        .form__group
+          input#email.user-form__input(type='email', placeholder='', required)
+          label.user-form__label(for='email') Email address
+        .form__group.ma-bt-md
+          input#password.user-form__input(type='password', placeholder='', required, minlength='8')
+          .toggle
+          label.user-form__label(for='password') Password
+        .form__group
+          button.btn.btn--gradient Login

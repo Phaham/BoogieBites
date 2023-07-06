@@ -1,0 +1,15 @@
+extends base
+
+block content
+  .success-background
+    .success-container
+      .success-screen
+        .success-screen-body
+            .success-title
+              span Payment Successful
+            img.success-img(src='/img/payment_success.svg')
+            p.success-message We are delighted to inform you that we have received your payment
+            if user 
+              p.success-message=`Thanku ${user.name} for Ordering🤩`
+            .success-btn 
+              a.btn-back-home.btn--gradient(href="/") Back To Home

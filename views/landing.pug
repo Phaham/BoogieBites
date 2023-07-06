@@ -1,0 +1,124 @@
+extends base
+
+block content
+    main.main
+        .blur_clr
+        .blur_clr
+
+        section
+            .content.landing-area
+                .contentBx
+                    h1.main-heading Best Food For Your Taste
+                    p
+                        |Satisfy your cravings, order diverse cuisines, and discover enticing recipes for a delightful culinary adventure.
+                    a.landing_btn(href='#our-cuisines') Explore Now
+                .imgBx
+                    img.main-dish(src='/img/dishes/dish1.png' alt='food pic')
+                .infoBx
+                    img.dish-1(src='/img/dishes/image_3.png' alt='food pic')
+                    img.dish-2(src='/img/dishes/main_2.png' alt='food pic')
+                    img.dish-3(src='/img/dishes/image_6.png' alt='food pic')
+                    img.dish-4(src='/img/dishes/image_5.png' alt='food pic')
+                    img.dish-5(src='/img/dishes/dish1.png' alt='food pic')
+
+
+        section.why-us
+            .content
+                .contentBx
+                    //- .text
+                    h1.main-heading Why Choose Us
+                    p
+                        |Our passion is to provide you with the ultimate dining experience. Enjoy delicious food, exceptional quality, and unforgettable recipes.
+                    .box-container
+                        .box
+                            .image
+                                img.item-image(src='/img/dishes/dish4.png' alt='')
+                            .content
+                                h2 Eat Good Food
+                                p Unforgettable Culinary Delights to Satisfy Your Food Cravings.
+                        .box
+                            .image
+                                img.item-image(src='/img/dishes/quality.png' alt='')
+                            .content
+                                h2 Best Quality
+                                p Uncompromising quality that guarantees a delightful dining experience.
+                        .box
+                            .image
+                                img.item-image(src='/img/dishes/recipe.jpg' alt='')
+                            .content
+                                h2 Awesome Recipes
+                                p Discover mouthwatering recipes that will leave you craving for more.
+
+
+
+                    section.special#our-cuisines
+                        h1 Our Special Cuisines
+
+
+
+        .card-container
+            each category in categories
+                .card
+                    .card__header
+                        .card__picture
+                            //- .card__picture-overlay &nbsp;
+                            img.card__picture-img(src=`/img/dishes/${category.imageCover}`, alt=`${category.name}`)
+
+                    .card__details
+                        h4.card__sub-heading= category.name
+                        p.card__text= category.summary
+
+                    .card__footer
+                        p.card__ratings
+                            .card__data
+                                svg.card__icon
+                                    use(xlink:href='/img/icons.svg#icon-globe')
+                                //- span= category.startDates[0].toLocaleString('en-us', {month: 'long', year: 'numeric'})
+                        a.btn.btn--gradient.btn--small(href=`/category/${category.slug}`) Explore 
+                
+        section#about-us.about-section
+            .container
+                h1.main-heading About Us
+                .row
+                    .about-text
+                        .our-story
+                            h2 Our Story
+                            p
+                                |Our journey began with a passion for food and technology. we overcame challenges, crafting a seamless experience to bring you diverse cuisines,
+                                |delightful recipes, and easy food ordering through our Node.js and MongoDB-powered food website.
+                        .our-food-items 
+                            h2 Our Food items
+                            p
+                               |Embark on a global gastronomic journey with our extensive menu of 72 dishes from around the world and 12 diverse categories, 
+                               |showcasing flavors from American comfort food to exotic Chinese, Japanese delights, and beyond.
+                        .owners
+                            h3 BoogieBites
+                            a.about_btn(href='#') Know More
+                    .about-img
+                        .img-box
+                            // <img src="images/ice.jpg" alt="profile-img">
+                            .blob-wobble
+
+
+        section#testimonial_area.testimonial
+            .testimonial-container
+                h1.main-heading Testimonials
+                .testimonial-row
+                    .col-md-12
+                        .testmonial_slider_area.text-center.owl-carousel
+                            each category in categories
+                                .box-area
+                                    .img-area
+                                        img(src= `img/users/${category.testimonials.author_image}` alt='user pic')
+                                    .testimonial-text
+                                        h5= category.testimonials.author
+                                        span Date: 
+                                            = category.testimonials.date
+                                    p.testimonial-content= category.testimonials.message
+                                    .star
+                                        ion-icon.icon-star(name=`${category.testimonials.rating[0]}`)
+                                        ion-icon.icon-star(name=`${category.testimonials.rating[1]}`)
+                                        ion-icon.icon-star(name=`${category.testimonials.rating[2]}`)
+                                        ion-icon.icon-star(name=`${category.testimonials.rating[3]}`)
+                                        ion-icon.icon-star(name=`${category.testimonials.rating[4]}`)
+                                        

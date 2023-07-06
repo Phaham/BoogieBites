@@ -1,0 +1,25 @@
+extends base
+
+block content
+
+  //- include navigation.pug -> do changes in header.pug
+  main
+    if products.length > 0
+      h1.centered YOUR CART
+      ul.cart__item-list
+        each p in products
+          li.cart__item
+            img(src=`${p.productId.imageUrl}` alt='')
+            h1= p.productId.title
+            h2= Quantity: p.quantity
+            form(action='/cart-delete-item' method='POST')
+              //- input(type='hidden' name='_csrf' value=`${csrfToken}`)
+              input(type='hidden' value=`${p.productId._id}` name='productId')
+              button.btn.danger(type='submit')
+                i.fas.fa-trash
+      .centered
+          form(action="/create-order" method="post")
+          //- input(type="hidden" name="_csrf" value=`${csrfToken}`)
+          button(type="submit" class="btn") Order Now!
+        a.btn(href='/checkout') Order Now
+    h1 No Products

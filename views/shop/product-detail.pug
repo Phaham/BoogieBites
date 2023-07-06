@@ -1,0 +1,15 @@
+extends base
+
+block content
+
+  main.details__container
+    .image
+      img(src=`${product.imageUrl}` alt=`${product.title}`)
+    .product-details
+      h1 product.title 
+      h2 Price: $ product.price
+      p product.description
+      form(action='/cart' method='POST')
+        //- input(type='hidden' name='_csrf' value='<%= csrfToken %>')
+        button.detail-cart-btn(type='submit') ADD TO CART
+        input(type='hidden' name='productId' value=`${product._id}`)

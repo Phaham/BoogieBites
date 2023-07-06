@@ -1,0 +1,46 @@
+extends base
+
+block append head 
+  script(src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js')
+  link(href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet')
+
+block content 
+
+  .background
+    #map
+    //- .map-container
+    .contact-container
+      .screen
+        .screen-body
+          .screen-body-item.left
+            .app-title
+              span Contact
+              span Us
+            .contact-section
+              .app-contact CONTACT AT : +91 8303544315
+              .app-contact MAIL US AT : boogiebites@mailsac.com
+              .app-contact ADDRESS : Jamia Milia Islamia, New Delhi, 110025
+          .screen-body-item
+            .app-form
+              .app-form-group
+                  input.input-field(type='text' placeholder='' autocomplete='off' required='')
+                  label.contact-label UserName
+              .app-form-group
+                  input.input-field(type='email' placeholder='' autocomplete='off' required='')
+                  label.contact-label Email id
+              //- .app-form-group
+              //-     input.input-field(type='email' placeholder='' autocomplete='off' required='')
+              //-     label.contact-label Email id
+              .app-form-group.message
+                  input.input-field(type='text' placeholder='' autocomplete='off' required='')
+                  label.contact-label Message
+              .app-form-group.buttons
+                a(href='#')
+                  button.bn632-hover.bn19 SEND
+
+  //- #map
+
+            //- script.
+            //-   document.querySelector('.bn632-hover').addEventListener('click', ()=>{
+            //-     showAlert("success", "Message sent successfully!");
+            //-   })

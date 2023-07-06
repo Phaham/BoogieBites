@@ -1,0 +1,440 @@
+[
+  {
+    "review": "The juicy, tender burger with crispy fries left me craving more. A true American classic!",
+    "rating": 5,
+    "user": "5c8a1dfa2f8fb814b56fa181",
+    "category": "6482fc4d336ab602e49bad1a"
+  },
+  {
+    "review": "The bibimbap was bursting with flavors, and the kimchi added a perfect kick! Highly recommended.",
+    "rating": 4,
+    "user": "5c8a1dfa2f8fb814b56fa181",
+    "category": "6482fc4d336ab602e49bad1b"
+  },
+  {
+    "review": "Le Croissant du Matin's buttery croissants are simply divine, a true taste of Paris.",
+    "rating": 5,
+    "user": "5c8a1dfa2f8fb814b56fa181",
+    "category": "6482fc4d336ab602e49bad1c"
+  },
+  {
+    "review": "Authentic ramen with rich broth and tender noodles, a must-try for ramen enthusiasts.",
+    "rating": 4,
+    "user": "5c8a1dfa2f8fb814b56fa181",
+    "category": "6482fc4d336ab602e49bad1d"
+  },
+  {
+    "review": "The sushi here is incredibly fresh and beautifully presented, a true feast for the eyes.",
+    "rating": 5,
+    "user": "5c8a1e1a2f8fb814b56fa182",
+    "category": "6482fc4d336ab602e49bad1d"
+  },
+  {
+    "review": "Deliciously authentic, the kebabs were tender and packed with flavor.",
+    "rating": 5,
+    "user": "5c8a1e1a2f8fb814b56fa182",
+    "category": "6482fc4d336ab602e49bad1e"
+  },
+  {
+    "review":"The pizza was perfectly thin and crispy, with a delicious blend of fresh toppings.",
+    "rating": 5,
+    "user": "5c8a1e1a2f8fb814b56fa182",
+    "category": "6482fc4d336ab602e49bad1f"
+  },
+  {
+    "review": "The mac and cheese was creamy and packed with flavor. Perfect comfort food!",
+    "rating": 4,
+    "user": "5c8a1e1a2f8fb814b56fa182",
+    "category": "6482fc4d336ab602e49bad1a"
+  },
+  {
+    "review": "The Kung Pao chicken was flavorful and had the perfect amount of spice.",
+    "rating": 5,
+    "user": "5c8a24402f8fb814b56fa190",
+    "category": "6482fc4d336ab602e49bad20"
+  },
+  {
+    "review": "The bulgogi was tender and juicy, and the accompanying side dishes were delightful. A must-try!",
+    "rating": 4,
+    "user": "5c8a24402f8fb814b56fa190",
+    "category": "6482fc4d336ab602e49bad1b"
+  },
+  {
+    "review": "Auctor euismod interdum augue tristique senectus nascetur cras justo eleifend mattis libero id adipiscing amet placerat",
+    "rating": 5,
+    "user": "5c8a24402f8fb814b56fa190",
+    "category": "6482fc4d336ab602e49bad21"
+  },
+  {
+    "review": "Borscht was absolutely delicious, bursting with rich flavors and tender meat. Highly recommended!",
+    "rating": 4,
+    "user": "5c8a24402f8fb814b56fa190",
+    "category": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "review": "The baklava was a heavenly treat, with its flaky layers and sweet syrup.",
+    "rating": 5,
+    "user": "5c8a24402f8fb814b56fa190",
+    "category": "6482fc4d336ab602e49bad1e"
+  },
+  {
+    "review":"The hot and sour soup was tangy and packed with fresh ingredients.",
+    "rating": 5,
+    "user": "5c8a1ec62f8fb814b56fa183",
+    "category": "6482fc4d336ab602e49bad20"
+  },
+  {
+    "review": "The spicy tofu stew had just the right amount of heat. It was incredibly comforting.",
+    "rating": 5,
+    "user": "5c8a1ec62f8fb814b56fa183",
+    "category": "6482fc4d336ab602e49bad1b"
+  },
+  {
+    "review": "Neque amet vel integer placerat ex pretium elementum vitae quis ullamcorper nullam nunc habitant cursus justo!!!",
+    "rating": 5,
+    "user": "5c8a1ec62f8fb814b56fa183",
+    "category": "6482fc4d336ab602e49bad21"
+  },
+  {
+    "review": "Chez Pierre's Coq au Vin is a rich and flavorful masterpiece, a must-try dish.",
+    "rating": 5,
+    "user": "5c8a1ec62f8fb814b56fa183",
+    "category": "6482fc4d336ab602e49bad1c"
+  },
+  {
+    "review": "The melt-in-your-mouth sashimi will transport you to culinary heaven, a seafood lover's dream.",
+    "rating": 5,
+    "user": "5c8a1ec62f8fb814b56fa183",
+    "category": "6482fc4d336ab602e49bad1d"
+  },
+  {
+    "review": "The tempura is light and crispy, perfectly complementing the tender vegetables and seafood.",
+    "rating": 5,
+    "user": "5c8a211f2f8fb814b56fa188",
+    "category": "6482fc4d336ab602e49bad1d"
+  },
+  {
+    "review": "The lasagna was rich and flavorful, layers of pasta and cheesy goodness.",
+    "rating": 5,
+    "user": "5c8a211f2f8fb814b56fa188",
+    "category": "6482fc4d336ab602e49bad1f"
+  },
+  {
+    "review": "Pelmeni were perfectly cooked and incredibly tasty. Loved every bite!",
+    "rating": 5,
+    "user": "5c8a211f2f8fb814b56fa188",
+    "category": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "review": "La Crêperie's savory Galettes are authentically French and burst with delicious fillings.",
+    "rating": 5,
+    "user": "5c8a211f2f8fb814b56fa188",
+    "category": "6482fc4d336ab602e49bad1c"
+  },
+  {
+    "review": "The dumplings were steamed to perfection, with a delicious filling inside.",
+    "rating": 5,
+    "user": "5c8a211f2f8fb814b56fa188",
+    "category": "6482fc4d336ab602e49bad20"
+  },
+  {
+    "review": "The hot and spicy buffalo wings had just the right amount of kick. Finger-licking good!",
+    "rating": 5,
+    "user": "5c8a211f2f8fb814b56fa188",
+    "category": "6482fc4d336ab602e49bad1a"
+  },
+  {
+    "review": "The General Tso's chicken was crispy, and the sauce had a great balance of sweet and spicy.",
+    "rating": 5,
+    "user": "5c8a20d32f8fb814b56fa187",
+    "category": "6482fc4d336ab602e49bad20"
+  },
+  {
+    "review": "Le Bistro's Ratatouille is a symphony of fresh vegetables, perfectly seasoned and beautifully presented.",
+    "rating": 4,
+    "user": "5c8a20d32f8fb814b56fa187",
+    "category": "6482fc4d336ab602e49bad1c"
+  },
+  {
+    "review": "Authentic carbonara, creamy and perfectly balanced, just like the ones in Italy.",
+    "rating": 5,
+    "user": "5c8a20d32f8fb814b56fa187",
+    "category": "6482fc4d336ab602e49bad1f"
+  },
+  {
+    "review": "Mouthwatering lentil soup, perfect for a comforting and hearty meal.",
+    "rating": 3,
+    "user": "5c8a20d32f8fb814b56fa187",
+    "category": "6482fc4d336ab602e49bad1e"
+  },
+  {
+    "review": "The mouthwatering BBQ ribs fell right off the bone. A barbecue lover's dream come true.",
+    "rating": 5,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "category": "6482fc4d336ab602e49bad1a"
+  },
+  {
+    "review": "The Peking duck was tender and had a crispy skin, served with mouthwatering pancakes.",
+    "rating": 5,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "category": "6482fc4d336ab602e49bad20"
+  },
+  {
+    "review": "The crispy fried chicken was absolutely addictive. I couldn't stop munching on it!",
+    "rating": 5,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "category": "6482fc4d336ab602e49bad1b"
+  },
+  {
+    "review": "Eleifend suspendisse ultricies platea primis ut ornare purus vel taciti faucibus justo nunc",
+    "rating": 4,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "category": "6482fc4d336ab602e49bad21"
+  },
+  {
+    "review": "Beef Stroganoff was a delightful blend of tender meat and creamy sauce. Truly satisfying.",
+    "rating": 4,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "category": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "review": "The tiramisu was heavenly, every bite melting in my mouth with a burst of coffee flavor.",
+    "rating": 5,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "category": "6482fc4d336ab602e49bad1f"
+  },
+  {
+    "review": "Flavorful and aromatic, the teriyaki chicken is a delightful combination of sweet and savory.",
+    "rating": 5,
+    "user": "5c8a23de2f8fb814b56fa18e",
+    "category": "6482fc4d336ab602e49bad1d"
+  },
+  {
+    "review": "The Turkish tea was a refreshing accompaniment to our meal, with its distinct aroma.",
+    "rating": 5,
+    "user": "5c8a23de2f8fb814b56fa18e",
+    "category": "6482fc4d336ab602e49bad1e"
+  },
+  {
+    "review": "Solyanka soup had a unique and delightful combination of flavors. A must-try Russian dish!",
+    "rating": 1,
+    "user": "5c8a23de2f8fb814b56fa18e",
+    "category": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "review": "The mapo tofu had a rich and savory flavor, with just the right amount of heat.",
+    "rating": 5,
+    "user": "5c8a23de2f8fb814b56fa18e",
+    "category": "6482fc4d336ab602e49bad20"
+  },
+  {
+    "review": "The fluffy pancakes topped with maple syrup were a delightful breakfast treat. Simply delicious!",
+    "rating": 5,
+    "user": "5c8a23de2f8fb814b56fa18e",
+    "category": "6482fc4d336ab602e49bad1a"
+  },
+  {
+    "review": "The kimchi pancake was crispy on the outside and packed with tangy kimchi goodness. Delicious!",
+    "rating": 5,
+    "user": "5c8a24282f8fb814b56fa18f",
+    "category": "6482fc4d336ab602e49bad1b"
+  },
+  {
+    "review": "Conubia semper efficitur rhoncus suspendisse taciti lectus ex sapien dolor molestie fusce class.",
+    "rating": 5,
+    "user": "5c8a24282f8fb814b56fa18f",
+    "category": "6482fc4d336ab602e49bad21"
+  },
+  {
+    "review":"Piroshki were heavenly, with a crispy golden crust and flavorful fillings. Simply mouthwatering!",
+    "rating": 5,
+    "user": "5c8a24282f8fb814b56fa18f",
+    "category": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "review": "Savory börek filled with cheese and spinach, a delightful blend of flavors.",
+    "rating": 5,
+    "user": "5c8a24282f8fb814b56fa18f",
+    "category": "6482fc4d336ab602e49bad1e"
+  },
+  {
+    "review": "The spring rolls were crispy and filled with a tasty combination of vegetables and meat.",
+    "rating": 5,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "category": "6482fc4d336ab602e49bad20"
+  },
+  {
+    "review": "The seafood jjajangmyeon was a flavor explosion. The noodles were perfectly cooked and the sauce was rich.",
+    "rating": 4,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "category": "6482fc4d336ab602e49bad1b"
+  },
+  {
+    "review": "Blandit varius finibus imperdiet tortor hendrerit erat rhoncus dictumst inceptos massa in.",
+    "rating": 5,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "category": "6482fc4d336ab602e49bad21"
+  },
+  {
+    "review": "Café au Lait's Crème Brûlée is the epitome of indulgence, with its velvety custard and caramelized sugar.",
+    "rating": 4,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "category": "6482fc4d336ab602e49bad1c"
+  },
+  {
+    "review": "Olivier salad was a refreshing medley of vegetables and meats. Loved the creamy dressing.",
+    "rating": 4,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "category": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "review": "Delicious risotto with a creamy texture and the perfect balance of flavors.",
+    "rating": 5,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "category": "6482fc4d336ab602e49bad1f"
+  },
+  {
+    "review": "The okonomiyaki is a savory pancake bursting with flavors and topped with delicious ingredients.",
+    "rating": 5,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "category": "6482fc4d336ab602e49bad1d"
+  },
+  {
+    "review": "The creamy New England clam chowder was rich and satisfying. A must-try for seafood enthusiasts.",
+    "rating": 5,
+    "user": "5c8a24822f8fb814b56fa192",
+    "category": "6482fc4d336ab602e49bad1a"
+  },
+  {
+    "review": "Authentic flavors, friendly staff, and generous portions. Loved the Pad Thai!",
+    "rating": 4,
+    "user": "5c8a24282f8fb814b56fa18f",
+    "category": "6482fc4d336ab602e49bad23"
+  },
+  {
+    "review": "Incredible Thai curry with a perfect balance of spices. Highly recommend the Tom Yum soup too!",
+    "rating": 5,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "category": "6482fc4d336ab602e49bad23"
+  },
+  {
+    "review": "The pineapple fried rice was a delightful blend of sweet and savory. Fantastic vegetarian options!",
+    "rating": 5,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "category": "6482fc4d336ab602e49bad23"
+  },
+  {
+    "review": "The green curry had a rich, creamy texture and the crispy spring rolls were addictive.",
+    "rating": 5,
+    "user": "5c8a24822f8fb814b56fa192",
+    "category": "6482fc4d336ab602e49bad23"
+  },
+  {
+    "review": "The egg fried rice was fluffy and had a delightful mix of flavors.",
+    "rating": 5,
+    "user": "5c8a24822f8fb814b56fa192",
+    "category": "6482fc4d336ab602e49bad20"
+  },
+  {
+    "review": "Nam ultrices quis leo viverra tristique curae facilisi luctus sapien eleifend fames orci lacinia pulvinar.",
+    "rating": 4,
+    "user": "5c8a24822f8fb814b56fa192",
+    "category": "6482fc4d336ab602e49bad21"
+  },
+  {
+    "review": "The cannoli was crispy and filled with a creamy, sweet ricotta filling, a true delight.",
+    "rating": 4,
+    "user": "5c8a24822f8fb814b56fa192",
+    "category": "6482fc4d336ab602e49bad1f"
+  },
+  {
+    "review": "The pilaf was fragrant and cooked to perfection, a delightful side dish.",
+    "rating": 5,
+    "user": "5c8a24822f8fb814b56fa192",
+    "category": "6482fc4d336ab602e49bad1e"
+  },
+  {
+    "review": "Delicious butter chicken, perfectly spiced and tender chicken, a must-try North Indian dish!",
+    "rating": 5,
+    "user": "5c8a20d32f8fb814b56fa187",
+    "category": "6482fc4d336ab602e49bad24"
+  },
+  {
+    "review": "The aromatic flavors of biryani left me craving for more, a true delight for the taste buds.",
+    "rating": 4,
+    "user": "5c8a211f2f8fb814b56fa188",
+    "category": "6482fc4d336ab602e49bad24"
+  },
+  {
+    "review": "The crispy samosas with flavorful chutneys were a heavenly combination, truly authentic North Indian street food.",
+    "rating": 4,
+    "user": "5c8a24822f8fb814b56fa192",
+    "category": "6482fc4d336ab602e49bad24"
+  },
+  {
+    "review": "The creamy paneer tikka masala was a vegetarian delight, rich in flavors and wonderfully satisfying.",
+    "rating": 5,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "category": "6482fc4d336ab602e49bad24"
+  },
+  {
+    "review": "Indulgent Turkish delight, a sugary delight that melted in our mouths.",
+    "rating": 5,
+    "user": "5c8a24a02f8fb814b56fa193",
+    "category": "6482fc4d336ab602e49bad1e"
+  },
+  {
+    "review": "The matcha green tea ice cream is a refreshing and creamy dessert, a delightful end to any meal.",
+    "rating": 2,
+    "user": "5c8a24402f8fb814b56fa190",
+    "category": "6482fc4d336ab602e49bad1d"
+  },
+  {
+    "review": "Sem risus tempor auctor mattis netus montes tincidunt mollis lacinia natoque adipiscing",
+    "rating": 5,
+    "user": "5c8a20d32f8fb814b56fa187",
+    "category": "6482fc4d336ab602e49bad21"
+  },
+  {
+    "review": "The dim sum selection was fantastic, with a variety of dumplings and steamed buns.",
+    "rating": 5,
+    "user": "5c8a1dfa2f8fb814b56fa181",
+    "category": "6482fc4d336ab602e49bad20"
+  },
+  {
+    "review": "Pelmeni were perfectly cooked and incredibly tasty. Loved every bite!",
+    "rating": 4,
+    "user": "5c8a1dfa2f8fb814b56fa181",
+    "category": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "review": "The dosas were perfectly crispy and the sambar had an authentic, flavorful kick." ,
+    "rating": 5,
+    "user": "5c8a24a02f8fb814b56fa193",
+    "category": "6482fc4d336ab602e49bad25"
+  },
+  {
+    "review": "The idlis were fluffy and the coconut chutney was a delightful accompaniment.",
+    "rating": 2,
+    "user": "5c8a1ec62f8fb814b56fa183",
+    "category": "6482fc4d336ab602e49bad25"
+  },
+  {
+    "review": "The biryani was rich in flavors and the chicken was tender and succulent.",
+    "rating": 5,
+    "user": "5c8a24402f8fb814b56fa190",
+    "category": "6482fc4d336ab602e49bad25"
+  },
+  {
+    "review": "The masala dosa had a delicious potato filling and the coconut sambal added a nice touch." ,
+    "rating": 5,
+    "user": "5c8a1e1a2f8fb814b56fa182",
+    "category": "6482fc4d336ab602e49bad25"
+  },
+  {
+    "review":"The idlis were fluffy and the coconut chutney was a delightful accompaniment.",
+    "rating": 4,
+    "user": "5c8a1dfa2f8fb814b56fa181",
+    "category": "6482fc4d336ab602e49bad25"
+  }
+]

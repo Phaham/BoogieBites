@@ -1,0 +1,24 @@
+#status
+.chat.overlay.hidden
+  .chat-title
+    h1 BoogieBites
+    h2 Share your experience
+    figure.avatar
+      img(src="/img/users/pk24.webp")
+  .messages
+    .messages-content#messages
+  .message-box
+    input.message-input#msgForm(name="msg" type="text", placeholder="Type message...")
+    button#emoji-btn &#128512;
+    button.message-submit(type="submit")
+      i.fa.fa-paper-plane
+button.chat-btn
+  i.fa.fa-comments
+.bg
+
+if user
+  div(id="access_name" data-user-name=`${user.name}`)
+  div(id="access_photo" data-user-photo=`${user.photo}`)
+else 
+  div(id="access_name" data-user-name=`Anonymous`)
+  div(id="access_photo" data-user-photo=`default_chat.jpg`)

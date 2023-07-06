@@ -1,0 +1,124 @@
+extends base
+
+block content
+   .container.order-container
+      img.food-img(src="e2.jpg", alt="food pic")
+      .order.user-box
+        input#order-amt.input-field(type="text", placeholder="Amount")
+      button#order-button1.btn Order
+    //- // Get order id from razor pay
+    script.
+      document.getElementById('order-button1').onclick = function (e) {
+        var url = '/api/payment/order';
+        var params = {
+          amount: Number(document.getElementById('order-amt').value) * 100,
+          currency: 'INR',
+          receipt: 'phaham_khan',
+          payment_capture: '1' //it canbe either 0 or 1 => 1 for automatic capture and 0 for manual
+        };
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function (res) {
+          if (xmlHttp.readyState === 4) {
+            res = JSON.parse(xmlHttp.responseText);
+            document.getElementById('rzp-text').value = res.sub.id;
+            document.getElementById('amount').value = `₹ ${document.getElementById('order-amt').value}`;
+          }
+        }
+        xmlHttp.open('POST', url, true);
+        xmlHttp.setRequestHeader('Content-type', 'application/json');
+        xmlHttp.send(JSON.stringify(params));
+      }
+    .container.checkout-container.hidden
+      img.food-img(src="e2.jpg", alt="food pic")
+      .order
+        .checkout-field
+          label.checkout-label.checkout-amount(for=) Amount
+          input#amount.field-left(type="text", name=, readonly)
+        .checkout-field
+          label.checkout-label.checkout-order-id(for=) Order Id
+          input#rzp-text.field-left(type="text", name=, readonly)
+      button#rzp-button1.btn Checkout
+    #paymentDetails
+
+    script(src="https://checkout.razorpay.com/v1/checkout.js")
+    script.
+      let order_id;
+      let payment_id;
+      let signature;
+      
+      let callback_url= "https://paymentsuccess.netlify.app/";
+      if(!callback_url){
+        callback_url = "http://localhost:3000/api/payment/verify";
+      }
+      document.getElementById('rzp-button1').onclick = function (e) {
+        var options = {
+          "key": key,
+          "currency": "INR",
+          "name": "BoogieBites",
+          "description": "boogiebites payment page",
+          "order_id": document.getElementById('rzp-text').value,
+          "handler": function (response) {
+            payment_id = response.razorpay_payment_id,
+            order_id = response.razorpay_order_id,
+            signature = response.razorpay_signature
+          },
+          "callback_url": "http://localhost:3000/api/payment/verify",
+          // callback_url,
+          "redirect": "true",
+          "notes": {
+          "address": "Razorpay Corporate Office"
+          },
+          "theme": {
+            "color": "#462989"
+          }
+        }
+        var rzp1 = new Razorpay(options);
+        rzp1.open();
+        e.preventDefault();
+      }
+      
+      
+      if (payment_id) {
+          var url = '/api/payment/verify';
+          var params = {
+          razorpay_order_id: order_id,
+          razorpay_payment_id: payment_id,
+          razorpay_signature: signature
+        }
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function (res) {
+          if (xmlHttp.readyState === 4) {
+            alert(xmlHttp.responseText);
+          }
+        }
+        xmlHttp.open('POST', url, true);
+        xmlHttp.setRequestHeader("Content-type", "application/json");
+        xmlHttp.send(JSON.stringify(params));
+      }
+
+    script.
+      const order_button = document.getElementById('order-button1');
+      const container = document.querySelector('.container');
+      const order_container = document.querySelector('.order-container');
+      const checkout_container = document.querySelector('.checkout-container');
+      const amount = document.querySelector('.input-field');
+      const checkout_button = document.getElementById('rzp-button1')
+      const success = document.querySelector('.order-success');
+      
+      function moveTocheckout() {
+        if (!amount.value) {
+          return;
+        }
+        else if (isNaN(amount.value)) {
+          alert('Amount must be in Numbers!');
+          return;
+        }
+        order_container.classList.add('hidden');
+        checkout_container.classList.remove('hidden');
+        container.style.transition = 'all .3s ease-in-out';
+      }
+      
+      order_button.addEventListener('click', moveTocheckout);
+      checkout_button.addEventListener('click', () => {
+        checkout_container.classList.add('hidden');
+      });

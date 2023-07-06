@@ -1,0 +1,64 @@
+header.header
+    button.hamburger
+      .bar
+
+    a.logo(href='#')
+        i.fas.fa-hamburger
+        span.logo-title BoogieBites
+    ul.nav
+        .nav_links
+            li: a(href="/") Home
+            li: a(href="/#about-us") About us
+            //- li: a(href="#") Careers
+            li: a(href="/contact") Contact
+
+            //- form.search-form(action='')
+            //- input.search-input(type='search' required='')
+            //- ion-icon.search-icon(name='search')
+
+        if user
+            a.nav__el.nav__el--logout Log out
+            a.nav__el.nav-dashboard(href="/dashboard")
+                img.nav__user-img(src=`/img/users/${user.photo}` alt=`Photo of ${user.name}`)
+                span= user.name.split(' ')[0]
+            div
+                label.toggleCart.btnStyle.btnStyle2(for='cartToggle')
+                    i.fa.fa-shopping-cart(aria-hidden='true')
+                    i.fa.fa-circle(aria-hidden='true')
+                    span.num 0
+
+        else
+            a.nav__el.log-in(href="/login") Log in
+            a.nav__el.nav__el--cta.sign-up(href="/signup") Sign up
+
+        .cart-items
+            ion-icon.close-cart(name="close-circle")
+            .cart
+            .empty Add Items to your Cart &#x1F6D2;
+            .cart-total
+                .total
+                    | total : 
+                    span $0
+                if user
+                    a#checkout-btn.place-order.btn.btn--small Place Order
+                else
+                    a.cart-login.nav__el(href="/login") Log in
+
+                //- script.
+                //-     var username = `${user.name}`;
+
+nav.mobile-nav
+    a(href="/") Home
+    a(href="#about-us") About us
+    a(href="/contact") Contact
+    //- a.toggleCart Cart
+
+    if user
+        a.nav__el.nav__el--logout Log out
+        a.nav__el.nav-dashboard-responsive(href="/dashboard")
+            img.nav__user-img(src=`/img/users/${user.photo}` alt=`Photo of ${user.name}`)
+            span= user.name.split(' ')[0]
+    else
+        a.nav__el.nav__el--login(href="/login") Log in
+
+

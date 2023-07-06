@@ -1,0 +1,24 @@
+extends base
+
+block content
+
+  main
+    if prods.length > 0
+      .grid
+        each product of prods
+          article.card.product-item
+            .card__image
+              img(src=`${product.imageUrl}` alt=`${product.title}`)
+            .card__content
+              p.product__title= product.title 
+              h3.product__price=`$ ${product.price}` 
+            .card__actions
+              a.btn(href=`/products/${product._id}`) Details
+              form(action='/cart' method='POST')
+                //- input(type='hidden' name='_csrf' value= `${csrfToken}`)
+                button.btn.btn--full.add-to-cart(type='submit')
+                  i.fas.fa-shopping-cart
+                input(type='hidden' name='productId' value=`${product._id}`)
+
+    else
+      h1 No Products

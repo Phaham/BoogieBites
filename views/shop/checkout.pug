@@ -1,0 +1,24 @@
+extends base
+
+block content 
+
+  main
+    h1.centered CHECKOUT
+    ul.cart__item-list
+      each p in products
+        li.cart__item
+          h1 p.productId.title
+          h2 Quantity: p.quantity
+    .centered
+      h2 Total: `${totalSum}`
+    .centered
+      button#order-btn.btn.btn--full Payment &rarr;
+      script(src='https://js.stripe.com/v3/')
+      script.
+        var stripe = Stripe('pk_test_51M135mSEgiNHw8gEmGOQYTnqkTOJTaZNwaxsCYUwetMm6oahO0tiT3RPuEitUqqmyHAClxe0Ca11VQHc63pjIikd00vWeAbnyq');
+        var orderBtn = document.getElementById("order-btn");
+        orderBtn.addEventListener("click", () => {
+          stripe.redirectToCheckout({
+            sessionId: `${sessionId}`
+          })
+        })

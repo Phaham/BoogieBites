@@ -1,0 +1,19 @@
+extends base
+
+block append head
+
+block content
+  script.
+    var stripePublicKey= stripePublicKey
+
+  section.cart-container.content-section
+    h2.section-header CART
+    .cart-row
+      span.cart-item.cart-header.cart-column ITEM
+      span.cart-price.cart-header.cart-column PRICE
+      span.cart-quantity.cart-header.cart-column QUANTITY
+    .cart-items
+    .cart-total
+      strong.cart-total-title Total
+      span.cart-total-price $0
+    button.btn-cart.btn-cart-primary.btn-purchase(type="button") PURCHASE

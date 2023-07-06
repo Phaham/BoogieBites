@@ -1,0 +1,108 @@
+extends base
+
+block content
+
+  figure.recipe__fig
+    img.recipe__img(src=`/img/dishes/${recipe.imageCover}` alt='cover image')
+    h1.recipe__title
+      span=recipe.name
+
+    .ingredient-pics-container 
+      .ingredient-pics.ingredient-pics-1
+        img.ingredient-pic(src='/img/dishes/ingredients1.webp' alt='ingredient pic')
+        img.ingredient-pic(src='/img/dishes/ingredients2.webp' alt='ingredient pic')
+        img.ingredient-pic(src='/img/dishes/ingredients3.webp' alt='ingredient pic')
+        img.ingredient-pic(src='/img/dishes/ingredients4.webp' alt='ingredient pic')
+        img.ingredient-pic(src='/img/dishes/veg.png' alt='ingredient pic')
+        //- img.ingredient-pic(src='/img/dishes/ingredients5.webp' alt='ingredient pic')
+      .ingredient-pics.ingredient-pics-2
+        img.ingredient-pic(src='/img/dishes/veg.png' alt='ingredient pic')
+        //- img.ingredient-pic(src='/img/dishes/ingredients5.webp' alt='ingredient pic')
+        //- img.ingredient-pic(src='/img/dishes/ingredients6.webp' alt='ingredient pic')
+        img.ingredient-pic(src='/img/dishes/ingredients4.webp' alt='ingredient pic')
+        img.ingredient-pic(src='/img/dishes/ingredients3.webp' alt='ingredient pic')
+        img.ingredient-pic(src='/img/dishes/ingredients2.webp' alt='ingredient pic')
+        img.ingredient-pic(src='/img/dishes/ingredients1.webp' alt='ingredient pic')
+
+  .recipe-data
+      .recipe__details
+        .recipe-responsive
+          .recipe__info
+            svg.recipe__info-icon
+              use(href='/img/dishes/icons.svg#icon-clock')
+            span.recipe__info-data.recipe__info-data--minutes=recipe.cookingTime
+            span.recipe__info-text minutes
+          .recipe__info
+            svg.recipe__info-icon
+              use(href='/img/dishes/icons.svg#icon-users')
+            span.recipe__info-data.recipe__info-data--people=recipe.servings
+            span.recipe__info-text servings
+
+          .recipe__info-buttons
+              //- button.btn--tiny.btn--increase-servings
+              //-   svg
+              //-     use(href='/img/dishes/icons.svg#icon-minus-circle')
+              //- button.btn--tiny.btn--increase-servings
+              //-   svg
+              //-     use(href='/img/dishes/icons.svg#icon-plus-circle')
+            
+
+        .recipe-authors
+          .recipe-svg
+            svg
+              use(href='/img/dishes/icons.svg#icon-user')
+          span.recipe__info-text Added By- 
+          span.recipe__info-data.recipe__info-data--author= recipe.authors[0]
+      
+
+          //- button.btn--round
+          //-   svg
+          //-     use(href='/img/dishes/icons.svg#icon-bookmark-fill')
+
+      .recipe_main
+        .recipe__ingredients
+          h2.recipe-heading--2 Recipe Ingrdients
+            .heading-pad
+              each ingredient in recipe.ingredients
+                ul.recipe__ingredient-list
+                  li.recipe__ingredient
+                    svg.recipe__icon
+                      use(href='/img/dishes/icons.svg#icon-check')
+                    .recipe__description= ingredient
+          //- .recipe-authors
+          //-   .recipe-svg
+          //-     svg
+          //-       use(href='/img/dishes/icons.svg#icon-user')
+          //-   span.recipe__info-text Added By- 
+          //-   span.recipe__info-data.recipe__info-data--author= recipe.authors[0]
+
+        .recipe__instructions
+          h2.recipe-heading--2 Recipe Instructions
+            p.recipe__directions-text= recipe.cookingInstructions
+
+      .section-pictures
+        each img, i in recipe.images
+          .picture-box
+            img.picture-box__img(src=`/img/dishes/${img}`, alt=`${recipe.name} pics`, class=`picture-box__img--${i + 1}`)
+
+
+      //- .special-slider
+      //-   .special-slide-track
+      //-     each img in recipe.images
+      //-       .special-slide
+      //-         img(src=`/img/dishes/${img}` height='100' width='250' alt=`${recipe.name} pics`)
+
+
+      //- .recipe__directions
+      //-   h2.recipe-heading--2 Source
+        //- p.recipe__directions-text
+        //-   | This recipe was carefully designed and tested by
+        //-   span.recipe__publisher The Pioneer Woman
+        //-   | . Please check out
+        //-   |     directions at their website.
+      .recipe-data-btn
+        a.btn--small.recipe__btn(href=`${recipe.sourceLink}` target='_blank')
+          span Source
+          svg.search__icon
+            use(href='/img/dishes/icons.svg#icon-arrow-right')
+        

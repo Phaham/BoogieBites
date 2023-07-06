@@ -1,0 +1,43 @@
+extends base
+include _reviewCard
+
+block append head
+
+block content
+      section.section-header.dish_name
+        .heading-box
+          h1.heading-primary
+            span= `${category.name} Dishes`
+
+      .recipe
+        //- h2.heading-dishes American Dishes
+        .recipe-container
+          each dish in category.dishes
+            .explore_card(data-id=`${dish.id}`)
+              .explore_imgBx
+                img.item-image(src=`/img/dishes/imageCover/${dish.imageCover}`, alt=`${dish.name}`)
+              .content
+                .details
+                  h2.title= dish.name
+                  span= dish.description
+                  .data
+                    h3
+                      span Type
+                      br
+                      =`${dish.type}`
+                    h3
+                      span Rating
+                      br
+                      =dish.ratingsAverage
+                    h3.price
+                      span Price
+                      br
+                      =`$${dish.price}`
+                  .actionBtn
+                    a.show_recipe(href=`/recipe/${dish.slug}`) Recipe
+                    a.add-to-cart Order
+
+      section.section-reviews
+        .reviews.owl-carousel
+          each review in category.reviews
+            +reviewCard(review)
