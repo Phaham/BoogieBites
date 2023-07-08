@@ -4,7 +4,7 @@ import { displayMap } from "./mapbox";
 import { login, logout } from "./login";
 import { signup } from "./signup";
 import { updateSettings } from "./updateSettings";
-// import { placeOrder } from "./stripe";
+import { Contact } from "./contact";
 import { showAlert } from "./alerts";
 
 // DOM ELEMENTS
@@ -17,6 +17,7 @@ const userPasswordForm = document.querySelector(".form-user-password");
 const orderBtn = document.getElementsByClassName('place-order')[0];
 const alertMessage = document.querySelector("body").dataset.alert;
 
+const send_btn = document.getElementById("send-contact");
 // DELEGATION
 if (mapBox) {
   // const locations = JSON.parse(mapBox.dataset.locations);
@@ -41,8 +42,8 @@ if (signupForm)
     signup(name, email, password, passwordConfirm);
   });
 
-if (logOutBtn) logOutBtn.forEach((e)=>{
-  e.addEventListener("click", logout); 
+if (logOutBtn) logOutBtn.forEach((e) => {
+  e.addEventListener("click", logout);
 })
 
 if (userDataForm)
@@ -74,11 +75,16 @@ if (userPasswordForm)
     document.getElementById("password-confirm").value = "";
   });
 
-// if (orderBtn)
-//   orderBtn.addEventListener("click", (e) => {
-//     e.target.textContent = "Processing...";
-//     // const { dishId } = e.target.dataset;
-//     placeOrder();
-//   });
+if (send_btn)
+  send_btn.addEventListener("click", (e) => {
+    Contact();
+  });
+
+if (orderBtn)
+  orderBtn.addEventListener("click", (e) => {
+    e.target.textContent = "Processing...";
+    // const { dishId } = e.target.dataset;
+    placeOrder();
+  });
 
 if (alertMessage) showAlert("success", alertMessage, 20);

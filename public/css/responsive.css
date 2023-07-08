@@ -96,7 +96,7 @@
   }
 }
 
-.close-cart{
+.close-cart {
   display: none;
 }
 
@@ -158,7 +158,7 @@
   .header {
     padding: 2.5rem 2rem;
   }
-  
+
   .nav_links {
     margin-right: 0rem;
   }
@@ -166,11 +166,11 @@
   .nav_links li {
     padding: 0;
   }
-  
+
   .testmonial_slider_area {
     max-width: 700px;
   }
-  
+
   .blob-wobble {
     width: 350px;
     height: 350px;
@@ -210,7 +210,7 @@
     grid-gap: 3rem 0;
     max-width: 87rem;
   }
-  
+
   .explore_card {
     width: 275px;
     height: 350px;
@@ -222,7 +222,7 @@
     padding: 1rem 2.5rem;
     font-size: 1.4rem;
   }
-  
+
   .recipe__instructions {
     padding: 5rem 3rem;
   }
@@ -230,13 +230,18 @@
   .recipe__ingredients {
     min-width: 45rem;
   }
-  
+
   .ingredient-pics-2 {
     margin-left: -68rem;
   }
-  
+
   .recipe-data-btn {
     margin-top: 26rem;
+  }
+
+  .order-row.order-heading-row {
+    margin-right: -1rem;
+    max-width: 664px;
   }
 }
 
@@ -314,12 +319,12 @@
   .fa-hamburger {
     font-size: 3rem;
   }
-  
+
   .blob-wobble {
     width: 300px;
     height: 300px;
   }
-  
+
   .about-section .container .row {
     flex-direction: column;
   }
@@ -330,7 +335,7 @@
     justify-content: space-between;
     /* flex-direction: row; */
   }
-  
+
   .about-section .container .row .about-text .owners {
     position: absolute;
     margin-top: 66rem;
@@ -350,7 +355,7 @@
     width: 305px;
     height: 300px;
   }
-  
+
   .why-us .content .contentBx {
     padding-top: 8rem;
   }
@@ -370,7 +375,7 @@
     grid-column: span 3;
     margin-top: 2rem;
   }
-  
+
   .logo-col {
     margin-top: 0;
   }
@@ -378,11 +383,11 @@
   .card-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .box-container .box:nth-child(1) {
     display: none;
   }
-  
+
   .infoBx {
     top: 48rem;
     left: 9rem;
@@ -414,7 +419,7 @@
     font-size: 1.2rem !important;
   }
 
-  
+
   .reviews {
     max-width: 645px;
   }
@@ -429,7 +434,7 @@
     grid-gap: 2rem;
     max-width: 87rem;
   }
-  
+
   .explore_card {
     width: 325px;
     height: 425px;
@@ -441,7 +446,7 @@
     padding: 1rem 3rem;
     font-size: 1.4rem;
   }
-  
+
   .recipe__ingredients {
     min-width: 36rem;
   }
@@ -449,7 +454,7 @@
   .ingredient-pics-2 {
     margin-left: -72rem;
   }
-  
+
   .recipe-data-btn {
     margin-top: 20rem;
   }
@@ -458,9 +463,11 @@
     width: 8rem;
     height: 9rem;
   }
+
   .success-img {
     height: 8rem;
   }
+
   .close-cart {
     display: block;
     fill: #b12a5b;
@@ -475,7 +482,7 @@
   .testmonial_slider_area {
     max-width: 550px;
   }
-  
+
   a.nav__el.nav-dashboard-responsive {
     margin-left: 29rem;
   }
@@ -521,11 +528,11 @@
   h1.main-heading {
     font-size: 4.5em;
   }
-  
+
   .account-password-toggle {
     top: 72%;
   }
-  
+
   .reviews {
     max-width: 540px;
   }
@@ -534,12 +541,12 @@
     width: 150px;
     height: 150px;
   }
-  
+
   .recipe-container {
     grid-gap: 3rem 0;
     max-width: 87rem;
   }
-  
+
   .explore_card {
     width: 275px;
     height: 350px;
@@ -574,7 +581,7 @@
   .recipe__info-data--author {
     font-size: 1.5rem;
   }
-  
+
   .recipe-svg {
     height: 3rem;
     width: 3rem;
@@ -587,10 +594,23 @@
   .ingredient-pics-2 {
     margin-left: -79rem;
   }
-  
-  /* .recipe-data-btn {
-    margin-top: 20rem;
-  } */
+
+  .order-row.order-heading-row {
+    margin-right: 0;
+    max-width: 590px;
+  }
+
+  .order-title {
+    padding-right: 15rem;
+  }
+
+  .order-row {
+    margin-left: 0;
+  }
+
+  .order-item-image {
+    width: 71px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -598,7 +618,7 @@
   .landing-area {
     flex-direction: column-reverse;
   }
-  
+
   a.nav__el.nav-dashboard-responsive {
     margin-left: 23rem;
   }
@@ -606,7 +626,7 @@
   .main .content .contentBx {
     padding-top: 12rem;
   }
-  
+
   .why-us .content .contentBx {
     padding-top: 3rem;
   }
@@ -654,13 +674,13 @@
   .owners .about_btn {
     margin-left: 14rem;
   }
-  
+
   .about-section .container .row .about-text .owners {
     position: absolute;
     margin-top: 90rem;
     margin-left: 0;
   }
-  
+
   .about-text {
     flex-direction: column;
   }
@@ -690,75 +710,91 @@
   .reviews {
     max-width: 420px;
   }
-  
+
   .explore_imgBx {
     width: 125px;
     height: 125px;
   }
-  
+
   .recipe-container {
     grid-gap: 3rem 0;
     max-width: 60rem;
   }
-  
+
   .explore_card {
     width: 238px;
     height: 320px;
   }
-  
+
   .explore_card .content .details span {
     font-size: 1.4em;
   }
-  
+
   .explore_card .content .details h2 {
     font-size: 1.9em;
   }
-  
+
   .add-to-cart,
   .show_recipe:link,
   .show_recipe:visited {
     padding: .9rem 2rem;
     font-size: 1.2rem;
   }
-  
+
   .recipe__instructions {
     padding: 5rem 7rem;
   }
-  
+
   .recipe_main {
     flex-direction: column;
   }
-  
+
   .ingredient-pics-container {
     column-gap: 64rem;
   }
-  
+
   .ingredient-pics-2 {
     margin-left: -72rem;
     flex-direction: column-reverse;
     margin-top: 70rem;
   }
-  
+
   .recipe__details {
     flex-direction: column;
   }
-  
+
   .recipe-authors {
     margin-top: 1rem;
     margin-right: 16rem;
   }
-  
+
   .recipe__title {
     font-size: 3rem;
   }
+
   .success-img {
     height: 6rem;
   }
-  .success-title span{
+
+  .success-title span {
     font-size: 3rem;
   }
+
   .success-message {
     font-size: 1.7rem;
+  }
+
+  .order-row.order-heading-row {
+    margin-right: -10px;
+    max-width: 480px;
+  }
+
+  .order-title {
+    padding-right: 9.5rem;
+  }
+
+  .order-column {
+    margin-right: 3.5rem;
   }
 }
 
@@ -942,25 +978,83 @@
   .success-img {
     height: 5rem;
   }
-  .success-title span{
+
+  .success-title span {
     font-size: 2.8rem;
   }
+
   .success-message {
     font-size: 1.5rem;
   }
+
   .success-screen-body {
     flex: 1;
     padding: 2rem 6rem 3rem 6rem;
   }
-  .login-form{
+
+  .login-form {
     padding: 5rem 5rem;
   }
-  .chat{
+
+  .chat {
     width: 260px;
     right: -108px;
     top: 42%;
     height: 60vh;
   }
+
+  .test-card {
+    width: 390px;
+    height: 262px;
+  }
+
+  .test-card-no {
+    font-size: 30px;
+    margin-top: 25px;
+  }
+
+  .test-front .test-row img {
+    width: 45px;
+  }
+
+  .test-card-cvv {
+    margin-top: 8px;
+  }
+
+  .test-bar {
+    height: 50px;
+    margin-top: 6px;
+  }
+
+  .test-card-cvv p {
+    font-size: 18px;
+  }
+
+  .order-column {
+    font-size: 1.7rem;
+  }
+
+  .order-item-title {
+    font-size: .9em;
+  }
+
+  .order-title {
+    padding-right: 4.5rem;
+  }
+
+  .order-items {
+    max-width: 390px;
+  }
+
+  .order-row.order-heading-row {
+    margin-right: -22px;
+    max-width: 390px;
+  }
+
+  .order-header {
+    font-size: 1.65em;
+  }
+
 }
 
 @media (max-width: 440px) {
@@ -1080,11 +1174,17 @@
   .recipe__instructions {
     max-width: 45rem;
   }
-  .login-form{
+
+  .login-form {
     padding: 5rem 3rem;
   }
-  .toggle{
+
+  .toggle {
     right: 0;
+  }
+
+  .account-password-toggle {
+    right: 10.5rem;
   }
 }
 
@@ -1196,29 +1296,111 @@
     width: 6rem;
     height: 6rem;
   }
+
   .ingredient-pics-2 {
     margin-left: -70rem;
   }
+
   .success-img {
     height: 5rem;
   }
-  .success-title span{
+
+  .success-title span {
     font-size: 2.5rem;
   }
+
   .success-screen-body {
     flex: 1;
     padding: 2rem 2rem 3rem 2rem;
   }
-  .login-form{
+
+  .login-form {
     padding: 5rem 2rem;
   }
+
   .user-form__label {
     font-size: 15px;
   }
+
   .toggle {
     top: 49%;
     width: 27px;
     height: 27px;
+  }
+
+  .account-password-toggle {
+    top: 79%;
+  }
+
+  main.main.account-main {
+    padding: 80px 28px 60px 20px;
+  }
+
+  .test-card {
+    width: 340px;
+    height: 238px;
+  }
+
+  .test-name {
+    font-size: 20px;
+  }
+
+  .test-card-no {
+    font-size: 30px;
+    margin-top: 25px;
+  }
+
+  .test-front .test-row img {
+    width: 45px;
+  }
+
+  .test-card-cvv {
+    margin-top: 5px;
+  }
+
+  .test-bar {
+    height: 50px;
+    margin-top: 2px;
+  }
+
+  .test-card-cvv p {
+    font-size: 13px;
+  }
+
+  .test-card-text {
+    margin-top: 20px;
+    font-size: 12.5px;
+  }
+
+  .test-signature p {
+    font-size: 1.4rem;
+  }
+
+  .test-signature img {
+    width: 7px;
+  }
+
+  .order-column {
+    margin-right: 2rem;
+    font-size: 1.55rem;
+  }
+
+  .order-header {
+    font-size: 1.45em;
+  }
+
+  .btn-status {
+    font-size: 1.1em;
+    padding: .8rem 2rem;
+  }
+
+  .order-row.order-heading-row {
+    margin-right: -11px;
+    max-width: 300px;
+  }
+
+  .order-title {
+    padding-right: 2.5rem;
   }
 }
 
@@ -1242,8 +1424,8 @@
     margin-left: -40px;
   }
 
-  .account-main {
-    padding: 0 30px 60px 0;
+  main.main.account-main {
+    padding: 80px 0px 60px 0px;
   }
 
   /* .side-nav a:link,

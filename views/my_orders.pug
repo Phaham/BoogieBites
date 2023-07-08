@@ -1,0 +1,17 @@
+extends base 
+
+block content 
+    section.order-container.order-content-section
+      h2.order-section-header MY ORDERS
+      .my-orders
+        .order-row.order-heading-row
+          span.order-title.order-header.order-column ITEM
+          span.order-price.order-header.order-column PRICE
+          span.order-quantity.order-header.order-column QUANTITY
+          if paymentStatus
+            span(data-status=`${paymentStatus}`)#status.order-status.order-header.order-column STATUS
+          else 
+            span(data-status=`FAILED`)#status.order-status.order-header.order-column STATUS
+
+        .order-items
+

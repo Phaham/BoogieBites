@@ -90,19 +90,29 @@ exports.getContact = (req, res) => {
 };
 
 exports.getpaymentSuccess= async (req, res) => {
-  const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
-  const customer = await stripe.customers.retrieve(session.customer);
-  res.send(`<html><body><h1>Thanks for your order, ${customer.name}!</h1></body></html>`);
+  // const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
+  // const customer = await stripe.customers.retrieve(session.customer);
+  // res.send(`<html><body><h1>Thanks for your order, ${customer.name}!</h1></body></html>`);
 
-  // res.status(200).render('paymentSuccess', {
-  //   title: 'payment_success',
-  // });
+  res.status(200).render('paymentSuccess', {
+    title: 'payment_success',
+  });
 };
 
 exports.getpaymentFailed= (req, res) => {
   res.status(200).render('paymentFailed', {
     title: 'payment_failed',
   });
+};
+exports.getTestCard= (req, res) => {
+  res.status(200).render('test_card', {
+    title: 'Your Test Card',
+  });
+};
+
+exports.getMyOrders= (req, res) => {
+  const paymentStatus = req.query.paymentStatus;
+  res.render('my_orders', { paymentStatus });
 };
 
 // exports.getMyCart = catchAsync(async (req, res, next) => {

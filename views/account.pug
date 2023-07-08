@@ -14,8 +14,8 @@ block content
         ul.side-nav
           +navItem('#', 'Settings', 'settings', true)
           +navItem('/my-orders', 'My Orders', 'shopping-bag')
+          +navItem('/testCard', 'My Card', 'credit-card')
           +navItem('#', 'My reviews', 'star')
-          +navItem('#', 'Billing', 'credit-card')
 
         - if (user.role === 'admin')
           .admin-nav
@@ -27,12 +27,6 @@ block content
               +navItem('#', 'Manage Orders', 'shopping-bag')
 
       .user-view__content
-        //- .bg-circles
-        //-   .circle1
-        //-   .circle2
-        //-   .circle3
-        //-   .circle4
-
         .user-view__form-container
           h2.heading-secondary.ma-bt-md settings
           

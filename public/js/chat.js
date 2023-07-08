@@ -1,6 +1,5 @@
 
 // Chat
-
 var user_name = 'Anonymous'
 var user_photo = 'default_chat.jpg'
 
@@ -23,6 +22,13 @@ var messages = $('.messages-content');
 const msgForm = document.getElementById('msgForm');
 
 $(window).on('load', function () {
+    socket.on('output-messages', data => {
+        if (data.length) {
+            data.forEach(message => {
+                appendMessages(message.name, message.photo, message.msg)
+            });
+        }
+    })
     messages.mCustomScrollbar();
 });
 
@@ -33,13 +39,13 @@ socket.on('message', data => {
 /////////////////////////////////////////////////////////////
 
 
-socket.on('output-messages', data => {
-    if (data.length) {
-        data.forEach(message => {
-            appendMessages(message.name, message.photo, message.msg)
-        });
-    }
-})
+// socket.on('output-messages', data => {
+//     if (data.length) {
+//         data.forEach(message => {
+//             appendMessages(message.name, message.photo, message.msg)
+//         });
+//     }
+// })
 
 function updateScrollbar() {
     messages.mCustomScrollbar("update").mCustomScrollbar('scrollTo', 'bottom', {
@@ -68,7 +74,7 @@ $('.message-submit').click(function () {
         photo: user_photo,
         message: msgForm.value,
     }
-    socket.emit('chatmessage', data)
+    socket.emit('chatmessage', data);
     insertMessage(msgForm.value);
 });
 
@@ -85,9 +91,10 @@ $(window).on('keydown', function (e) {
         return false;
     }
 })
-// socket.on('chatmessage', message => {
-//     appendMessages(message.name, message.photo, message.message);
-// });
+// 💥
+socket.on('chatmessage', message => {
+    appendMessages(message.name, message.photo, message.message);
+});
 
 function appendMessages(user_name, user_photo, message) {
     // if ($('.message-input').val() != '') {

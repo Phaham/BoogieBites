@@ -2,7 +2,7 @@ header.header
     button.hamburger
       .bar
 
-    a.logo(href='#')
+    a.logo(href='/')
         i.fas.fa-hamburger
         span.logo-title BoogieBites
     ul.nav
@@ -30,6 +30,11 @@ header.header
         else
             a.nav__el.log-in(href="/login") Log in
             a.nav__el.nav__el--cta.sign-up(href="/signup") Sign up
+
+            style.
+                .nav_links{
+                    margin-right: 20rem;
+                }
 
         .cart-items
             ion-icon.close-cart(name="close-circle")

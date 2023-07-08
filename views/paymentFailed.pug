@@ -8,6 +8,11 @@ block content
             .success-title
               span Payment Failed
             img.success-img(src='/img/payment_failed.svg')
-            p.success-message Sorry to inform you that your payment has failed. Please review your payment details and try again.
+            //- p.success-message Sorry to inform you that your payment has failed. Please review your payment details and try again.
+            if user
+              p.success-message
+                | Sorry
+                span.success-user-name=` ${user.name} `
+                | your payment has failed 😔. Please review your payment details and try again.
             .success-btn 
               a.btn-back-home.btn--gradient(href="/") Back To Home

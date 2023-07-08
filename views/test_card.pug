@@ -1,0 +1,40 @@
+extends base 
+
+block content 
+  .test-container
+    .test-card
+      .test-card-inner
+        .test-front
+          img.test-map-img(src="https://i.ibb.co/PYss3yv/map.png")
+          .test-row
+            img(src="https://i.ibb.co/G9pDnYJ/chip.png", width="60px")
+            img(src="https://i.ibb.co/WHZ3nRJ/visa.png", width="60px")
+          .test-row.test-card-no
+            p 4111
+            p 1111
+            p 1111
+            p 1111
+          .test-row.test-card-holder
+            p CARD HOLDER
+            p VALID TILL
+          .test-row.test-name
+            if user
+              p= user.name
+            else 
+              p JOHN DOE
+            p 10 / 25
+        .test-back
+          img.test-map-img(src="https://i.ibb.co/PYss3yv/map.png")
+          .test-bar
+          .test-row.test-card-cvv
+            div
+              img(src="https://i.ibb.co/S6JG8px/pattern.png")
+            p 824
+          .test-row.test-card-text
+            p this is a virtualil designed card for indian test payments make sure to use indian address with this.
+          .test-row.test-signature
+            if user
+              p= user.name
+            else
+              p CUSTOMER SIGNATURE
+            img(src="https://i.ibb.co/WHZ3nRJ/visa.png", width="80px")

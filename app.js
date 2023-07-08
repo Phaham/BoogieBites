@@ -71,11 +71,8 @@ app.use(xss());
 app.use(
   hpp({
     whitelist: [
-      "duration",
       "ratingsQuantity",
       "ratingsAverage",
-      "maxGroupSize",
-      "difficulty",
       "price",
     ],
   })
@@ -124,7 +121,7 @@ app.post("/create-checkout-session", async (req, res) => {
           name: productName,
           images: [productImage],
         },
-        unit_amount: price*100,
+        unit_amount: price * 100,
       },
       quantity: productQuantity,
     });
@@ -136,31 +133,31 @@ app.post("/create-checkout-session", async (req, res) => {
     mode: "payment",
     // success_url: `${req.protocol}://${req.get("host")}/paymentSuccess`,
     success_url: `${req.protocol}://${req.get("host")}/paymentSuccess?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${req.protocol}://${req.get("host")}/paymentFailed`,
+    cancel_url: `${req.protocol}://${req.get("host")}/paymentFailed?session_id={CHECKOUT_SESSION_ID}`,
   });
 
   res.json({ id: session.id });
 });
 
-app.get('/paymentSuccess', async (req, res) => {
-  // const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
-  // const customer = await stripe.customers.retrieve(session.customer);
-  // console.log(customer.name)
-  // res.send(`<html><body><h1>Thanks for your order, ${customer.name}!</h1></body></html>`);
+// app.get('/paymentSuccess', async (req, res) => {
+//   // const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
+//   // const customer = await stripe.customers.retrieve(session.customer);
+//   // console.log(customer.name)
+//   // res.send(`<html><body><h1>Thanks for your order, ${customer.name}!</h1></body></html>`);
 
-  res.status(200).render('paymentSuccess', {
-    title: 'payment_success',
-  });
-});
+//   res.status(200).render('paymentSuccess', {
+//     title: 'payment_success',
+//   });
+// });
 
 
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
-const fulfillOrder = (lineItems) => {
-  console.log("Fulfilling order", lineItems);
+let paymentStatus = 'FAILED';
+const fulfillOrder = (status) => {
+  paymentStatus = status;
 }
-
-app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (request, response) => {
+app.post('/webhook', bodyParser.raw({ type: 'application/json' }), async (request, response) => {
   const payload = request.body;
   const sig = request.headers['stripe-signature'];
 
@@ -171,25 +168,26 @@ app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (request,
   } catch (err) {
     return response.status(400).send(`Webhook Error: ${err.message}`);
   }
-
+  
   if (event.type === 'checkout.session.completed') {
-    const sessionWithLineItems = await stripe.checkout.sessions.retrieve(
-      event.data.object.id,
-      {
-        expand: ['line_items'],
-      }
-    );
-    const lineItems = sessionWithLineItems.line_items;
+    showAlert("success", "Order placed successfully!");
+    // const sessionWithLineItems = await stripe.checkout.sessions.retrieve(
+    //   event.data.object.id,
+    //   {
+    //     expand: ['line_items'],
+    //   }
+    // );
+    // const lineItems = sessionWithLineItems.line_items;
 
-    // Fulfill the purchase...
-    fulfillOrder(lineItems);
+    let status = success;
+    fulfillOrder(status);
   }
 
   response.status(200).end();
 });
-
-
-
+app.get('/my-orders', async (req, res) => {
+  res.status(200).render('myOrders', { paymentStatus });
+});
 //////////////////////////////////////////////////////////////////////////////////////
 
 app.all("*", (req, res, next) => {

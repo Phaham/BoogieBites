@@ -56,12 +56,11 @@ class LocalCart {
       cart.set(id, item)
 
     localStorage.setItem(LocalCart.key, JSON.stringify(Object.fromEntries(cart)))
-
   }
 
   static removeItemFromCart(id) {
 
-    let cart = LocalCart.getLocalCartItems()
+    let cart = LocalCart.getLocalCartItems();
 
     if (cart.has(id)) {
       cart.delete(id)
@@ -150,7 +149,12 @@ if (checkoutButton) {
         quantity: quantity
       })
     }
-    // console.log(items);
+
+    let existingItems = localStorage.getItem('myOrdersKey');
+    let updatedOrders = existingItems ? JSON.parse(existingItems) : [];
+    updatedOrders = updatedOrders.concat(items);
+    localStorage.setItem("myOrdersKey", JSON.stringify(updatedOrders));
+    localStorage.removeItem(LocalCart.key);
 
     fetch("/create-checkout-session", {
       headers: { 'Content-Type': 'application/json' },
@@ -180,20 +184,7 @@ if (checkoutButton) {
       });
   });
 }
-// function purchase() {
-// var priceElement = document.getElementsByClassName('total')[0];
-// var price = parseFloat(priceElement.innerText.replace('Total : $', '')) * 100
-// stripeHandler.open({
-//   amount: price
-// })
-// var cartItems = document.getElementsByClassName('cart')[0];
-// while (cartItems.hasChildNodes()) {
-//   cartItems.removeChild(cartItems.firstChild);
-// }
-// updateCartTotal();
-// empty();
-// localStorage.clear()
-// }
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function removeCartItem(event) {
@@ -279,10 +270,53 @@ function DisplayLocal() {
   updateCartTotal()
 }
 
+var isOrderDefined = document.getElementsByClassName('order-container')[0];
+if (isOrderDefined) {
+  DisplayLocalOrder();
+}
+
+//order
+function DisplayLocalOrder() {
+  var items = JSON.parse(localStorage.getItem("myOrdersKey"));
+  if (items === null) return
+  var size = items.length;
+
+  for (var i = 0; i < size; i++) {
+    var item = items[i];
+    var title = item.name;
+    var quantity = item.quantity;
+    var price = item.price;
+    var img = item.image;
+    DisplayOrder(title, price, img, quantity);
+  }
+}
+
+function DisplayOrder(title, price, imageSrc, quantity) {
+  var status = document.getElementById('status').dataset.status;
+  var orderItems = document.getElementsByClassName('order-items')[0];
+
+  var orderRow = document.createElement('div')
+  orderRow.classList.add('order-row');
+  var orderRowContents = `
+      <div class="order-item order-column">
+          <img class="order-item-image" src="${imageSrc}" width="100" height="100">
+          <span class="order-item-title">${title}</span>
+      </div>
+      <span class="order-price order-column">$${price}</span>
+      <span class="order-quantity order-column">${quantity}</span>
+      <span class="btn-status">${status}</span>
+  `
+  orderRow.innerHTML = orderRowContents
+  orderItems.append(orderRow)
+  if (status != 'FAILED') {
+    const btnStatus = document.querySelector('.btn-status');
+    btnStatus.style.backgroundColor = '#398552';
+  }
+}
+
 if (checkoutButton) {
   DisplayLocal()
 }
-
 
 function DisplayLocalCart(title, price, imageSrc, quantity, id) {
   var cartItems = document.getElementsByClassName('cart')[0];
@@ -370,6 +404,9 @@ for (var i = 0; i < addToCartbtn.length; i++) {
 
 
 
+// Orders -
+
+
 
 
 // 💥 password functionality show-hide
@@ -390,11 +427,10 @@ function showHide() {
     password.focus()
   }
 }
-
-toggle.addEventListener('click', showHide);
+if (toggle) {
+  toggle.addEventListener('click', showHide);
+}
 
 // toggle.forEach((e) => {
 //   e.addEventListener('click', showHide);
 // });
-
-
