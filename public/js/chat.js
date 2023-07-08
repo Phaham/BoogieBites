@@ -69,17 +69,20 @@ function insertMessage(msg) {
     updateScrollbar();
 }
 $('.message-submit').click(function () {
+    const message = msgForm.value.trim();
+    if(message == '')return;
     const data = {
         name: user_name,
         photo: user_photo,
-        message: msgForm.value,
+        message: message,
     }
     socket.emit('chatmessage', data);
-    insertMessage(msgForm.value);
+    insertMessage(message);
 });
 
 $(window).on('keydown', function (e) {
     const message = msgForm.value.trim();
+    if(message == '')return;
     if (e.which == 13) {
         const data = {
             name: user_name,
