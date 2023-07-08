@@ -476,6 +476,11 @@
     top: -3rem;
     left: 31.5rem;
   }
+  a.nav__el.nav-dashboard-responsive:hover {
+    background: none;
+    box-shadow: none;
+    transform: translateY(.5rem);
+  }
 }
 
 @media (max-width: 715px) {
@@ -704,7 +709,7 @@
   }
 
   .account-password-toggle {
-    top: 78%;
+    top: 76%;
   }
 
   .reviews {
@@ -795,6 +800,9 @@
 
   .order-column {
     margin-right: 3.5rem;
+  }
+  .dish_name .heading-box .heading-primary {
+    margin-top: 4rem;
   }
 }
 
@@ -890,6 +898,7 @@
   .footer-link:link,
   .footer-link:visited {
     font-size: 1.7rem;
+    word-wrap: break-word;
   }
 
 
@@ -906,7 +915,7 @@
     font-size: 1.7rem;
   }
 
-  .side-nav li:nth-child(3) {
+  .side-nav li:nth-child(4) {
     display: none;
   }
 
@@ -940,6 +949,7 @@
   .explore_card {
     width: 275px;
     height: 350px;
+    margin-top: 4rem;
   }
 
   .add-to-cart,
@@ -1200,10 +1210,14 @@
   a.nav__el.nav-dashboard-responsive {
     margin-left: 13rem;
   }
-
+  a.nav__el.nav-dashboard-responsive:hover {
+    background: none;
+    box-shadow: none;
+    transform: translateY(.5rem);
+  }
   .box-container .box {
     max-width: 300px;
-    margin-left: 50px;
+    margin-left: 32px;
     margin-right: 26px;
   }
 
@@ -1245,7 +1259,7 @@
   }
 
   .btn--small {
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
   }
 
   .cart-items {
@@ -1257,15 +1271,14 @@
   }
 
   main.main.account-main {
-    padding: 10px 30px 60px 10px;
+    padding: 10px 10px 10px 10px;
   }
-
-  .account-password-toggle {
-    top: 78%;
+  .user-view__menu{
+    padding-bottom: 2rem;
+    margin-top: 5rem;
   }
-
   .reviews {
-    max-width: 350px;
+    max-width: 300px;
   }
 
   .reviews__card {
@@ -1329,11 +1342,8 @@
   }
 
   .account-password-toggle {
-    top: 79%;
-  }
-
-  main.main.account-main {
-    padding: 80px 28px 60px 20px;
+    right: 8.5rem;
+    top: 80%;
   }
 
   .test-card {
@@ -1402,6 +1412,16 @@
   .order-title {
     padding-right: 2.5rem;
   }
+ .side-nav {
+    flex-direction: column;
+  }
+  .dish_name .heading-box .heading-primary {
+    font-size: 4rem;
+    margin-top: 7rem;
+  }
+  .explore_card:nth-child(1){
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 365px) {
@@ -1425,9 +1445,12 @@
   }
 
   main.main.account-main {
-    padding: 80px 0px 60px 0px;
+    padding: 30px 0px 60px 0px;
   }
-
+  .account-password-toggle{
+    right: 7.5rem;
+    top: 78.5%;
+  }
   /* .side-nav a:link,
   .side-nav a:visited {
     font-size: 1.1rem;
