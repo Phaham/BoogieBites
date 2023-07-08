@@ -92,9 +92,9 @@ $(window).on('keydown', function (e) {
     }
 })
 // 💥
-socket.on('chatmessage', message => {
-    appendMessages(message.name, message.photo, message.message);
-});
+// socket.on('chatmessage', message => {
+//     appendMessages(message.name, message.photo, message.message);
+// });
 
 function appendMessages(user_name, user_photo, message) {
     // if ($('.message-input').val() != '') {
