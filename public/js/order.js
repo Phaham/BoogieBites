@@ -68,7 +68,7 @@ class LocalCart {
     }
 
     if (cart.size === 0)
-      localStorage.clear()
+      localStorage.removeItem(LocalCart.key);
   }
 }
 
