@@ -849,10 +849,9 @@ span.order-item-quantity.order-column {
   border-bottom: none;
 }
 .order-title {
-  padding-right: 19rem;
+  padding-right: 24rem;
   margin-right: 0;
 }
-
 .order-item {
   display: flex;
   align-items: center;
