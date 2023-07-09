@@ -159,34 +159,28 @@ const fulfillOrder = (status) => {
   paymentStatus = status;
 };
 
-app.post('/webhook', bodyParser.raw({ type: 'application/json' }), async (request, response) => {
-  const payload = request.body;
+app.post('/webhook', express.raw({ type: 'application/json' }), (request, response) => {
   const sig = request.headers['stripe-signature'];
 
   let event;
 
   try {
-    event = stripe.webhooks.constructEvent(payload, sig, endpointSecret);
+    event = stripe.webhooks.constructEvent(request.body, sig, endpointSecret);
   } catch (err) {
-    return response.status(400).send(`Webhook Error: ${err.message}`);
+    response.status(400).send(`Webhook Error: ${err.message}`);
+    return;
   }
 
-  if (event.type === 'checkout.session.completed') {
-    // showAlert("success", "Order placed successfully!");
-
-    // const sessionWithLineItems = await stripe.checkout.sessions.retrieve(
-    //   event.data.object.id,
-    //   {
-    //     expand: ['line_items'],
-    //   }
-    // );
-    // const lineItems = sessionWithLineItems.line_items;
-
-    let status = 'success';
-    fulfillOrder(status);
+  switch (event.type) {
+    case 'checkout.session.completed':
+      const checkoutSessionCompleted = event.data.object;
+      let status = 'success';
+      fulfillOrder(status);
+      break;
+    default:
+      console.log(`Unhandled event type ${event.type}`);
   }
-
-  response.status(200).end();
+  response.send();
 });
 app.get('/my-orders', async (req, res) => {
   res.status(200).render('myOrders', { paymentStatus });
