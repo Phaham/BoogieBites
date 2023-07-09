@@ -167,7 +167,7 @@ app.post("/create-checkout-session", async (req, res) => {
 
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
-let paymentStatus = false;
+let paymentStatus;
 
 const fulfillOrder = (status) => {
   paymentStatus = status;
