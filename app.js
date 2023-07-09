@@ -59,10 +59,10 @@ app.use("/api", limiter);
 // Body parser, reading data from body into req.body
 // app.use(express.json({ limit: "10kb" }));
 app.use((req, res, next) => {
-  if (req.originalUrl === 'https://boogiebites.onrender.com/webhook') {
-    next(); // Do nothing with the body because I need it in a raw state.
+  if (req.originalUrl === '/webhook') {
+    next(); 
   } else {
-    express.json({ limit: "10kb" })  // ONLY do express.json() if the received request is NOT a WebHook from Stripe.
+    express.json({ limit: "10kb" })(req, res, next);
   }
 });
 app.use(express.urlencoded({ extended: true, limit: "10kb" }));
@@ -95,14 +95,14 @@ app.use((req, res, next) => {
 
 
 
-app.use(bodyParser.json());
-// app.use((req, res, next) => {
-//   if (req.originalUrl === '/webhook') {
-//     next(); 
-//   } else {
-//     bodyParser.json()
-//   }
-// });
+// app.use(bodyParser.json());
+app.use((req, res, next) => {
+  if (req.originalUrl === '/webhook') {
+    next(); 
+  } else {
+    bodyParser.json({ limit: "10kb" })(req, res, next);
+  }
+});
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
