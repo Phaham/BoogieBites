@@ -167,7 +167,7 @@ app.post("/create-checkout-session", async (req, res) => {
 
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
-let paymentStatus = 'FAILED';
+let paymentStatus = false;
 
 const fulfillOrder = (status) => {
   paymentStatus = status;
@@ -190,7 +190,7 @@ app.post('/webhook', express.raw({ type: 'application/json' }), (request, respon
   switch (event.type) {
     case 'checkout.session.completed':
       const checkoutSessionCompleted = event.data.object;
-      let status = 'success';
+      let status =  true';
       fulfillOrder(status);
       break;
     default:
