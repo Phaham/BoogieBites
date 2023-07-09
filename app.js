@@ -57,7 +57,14 @@ app.use("/api", limiter);
 
 
 // Body parser, reading data from body into req.body
-app.use(express.json({ limit: "10kb" }));
+// app.use(express.json({ limit: "10kb" }));
+app.use((req, res, next) => {
+  if (req.originalUrl === '/webhook') {
+    next(); // Do nothing with the body because I need it in a raw state.
+  } else {
+    express.json({ limit: "10kb" })  // ONLY do express.json() if the received request is NOT a WebHook from Stripe.
+  }
+});
 app.use(express.urlencoded({ extended: true, limit: "10kb" }));
 app.use(cookieParser());
 
@@ -88,7 +95,14 @@ app.use((req, res, next) => {
 
 
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
+app.use((req, res, next) => {
+  if (req.originalUrl === '/webhook') {
+    next(); 
+  } else {
+    bodyParser.json()
+  }
+});
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
