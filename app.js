@@ -154,9 +154,11 @@ app.post("/create-checkout-session", async (req, res) => {
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
 let paymentStatus = 'FAILED';
+
 const fulfillOrder = (status) => {
   paymentStatus = status;
-}
+};
+
 app.post('/webhook', bodyParser.raw({ type: 'application/json' }), async (request, response) => {
   const payload = request.body;
   const sig = request.headers['stripe-signature'];
@@ -168,9 +170,10 @@ app.post('/webhook', bodyParser.raw({ type: 'application/json' }), async (reques
   } catch (err) {
     return response.status(400).send(`Webhook Error: ${err.message}`);
   }
-  
+
   if (event.type === 'checkout.session.completed') {
-    showAlert("success", "Order placed successfully!");
+    // showAlert("success", "Order placed successfully!");
+
     // const sessionWithLineItems = await stripe.checkout.sessions.retrieve(
     //   event.data.object.id,
     //   {
@@ -179,7 +182,7 @@ app.post('/webhook', bodyParser.raw({ type: 'application/json' }), async (reques
     // );
     // const lineItems = sessionWithLineItems.line_items;
 
-    let status = success;
+    let status = 'success';
     fulfillOrder(status);
   }
 
