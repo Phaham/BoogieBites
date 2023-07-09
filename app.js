@@ -199,7 +199,7 @@ app.post('/webhook', express.raw({ type: 'application/json' }), (request, respon
   response.send();
 });
 app.get('/my-orders', async (req, res) => {
-  res.status(200).render('myOrders', { paymentStatus });
+  res.status(200).render('my_orders', { paymentStatus });
 });
 //////////////////////////////////////////////////////////////////////////////////////
 
