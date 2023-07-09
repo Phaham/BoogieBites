@@ -901,8 +901,18 @@ span.order-item-quantity.order-column {
   font-size: 1.3rem;
   padding: .8rem 3rem;
 }
+.my-orders::-webkit-scrollbar {
+  width: .5rem;
+}
 
+.my-orders::-webkit-scrollbar-track {
+  background: transparent;
+}
 
+.my-orders::-webkit-scrollbar-thumb {
+  background: #f48982;
+  border-radius: 3rem;
+}
 
 /* test-card  */
 .test-container {
