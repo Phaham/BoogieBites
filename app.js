@@ -171,6 +171,7 @@ let paymentStatus = 'FAILED';
 
 const fulfillOrder = (status) => {
   paymentStatus = status;
+  console.log(paymentStatus);
 };
 
 app.post('/webhook', express.raw({ type: 'application/json' }), (request, response) => {
