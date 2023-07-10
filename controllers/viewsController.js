@@ -111,8 +111,16 @@ exports.getTestCard= (req, res) => {
 };
 
 exports.getMyOrders= (req, res) => {
-  const paymentStatus = req.query.paymentStatus;
-  res.render('my_orders', { paymentStatus });
+  const order = await Order.findOne({ user: req.user.id });
+  // console.log(items)
+  if(order){
+    var items = order.items;
+  }
+  else{
+    items = []
+  }
+  
+  res.render('my_orders', {items});
 };
 
 // exports.getMyCart = catchAsync(async (req, res, next) => {
