@@ -164,18 +164,29 @@ const fulfillOrder = async (user_session) => {
   });
   /////////////////////////////////
   console.log('session',session);
-  console.log('line_items',,session.line_items); 
+  console.log('line_items',session.line_items); 
   console.log('line_items-data',session.line_items.data);
   ////////////////////////////////////
-  session.line_items.data.forEach(item => {
-    items.push({
-      name: item.description,
-      image: item.price.product.images[0],
-      price: item.amount_total,
-      quantity: item.quantity
+  // session.line_items.data.forEach(item => {
+  //   items.push({
+  //     name: item.description,
+  //     image: item.price.product.images[0],
+  //     price: item.amount_total,
+  //     quantity: item.quantity
+  //   })
+  // });
+  session.line_items.data.forEach(innerItem => {
+    innerItem.forEach((item)=>{
+      items.push({
+        name: item.description,
+        image: item.price.product.images[0],
+        price: item.amount_total,
+        quantity: item.quantity
+      })
     })
   });
 
+  
   const user = (await User.findOne({ email: user_session.customer_email })).id;
     console.log('user',user)
   let order = await Order.findOne({ user });
