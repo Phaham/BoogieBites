@@ -168,9 +168,6 @@ if (checkoutButton) {
         return stripe.redirectToCheckout({ sessionId: session.id });
       })
       .then(function (result) {
-        // If redirectToCheckout fails due to a browser or network
-        // error, you should display the localized error message to your
-        // customer using error.message.
         if (result.error) {
           alert(result.error.message);
         }
@@ -246,9 +243,9 @@ function updateCartTotal() {
 
 function DisplayLocal() {
   const items = LocalCart.getLocalCartItems()
+  if (items === null) return
   const size = items.size;
 
-  if (items === null) return
   var ent = Object.fromEntries(items);
 
   for (var i = 0; i < size; i++) {
@@ -290,7 +287,6 @@ function DisplayLocalOrder() {
 }
 
 function DisplayOrder(title, price, imageSrc, quantity) {
-  var status = document.getElementById('status').dataset.status;
   var orderItems = document.getElementsByClassName('order-items')[0];
 
   var orderRow = document.createElement('div')
