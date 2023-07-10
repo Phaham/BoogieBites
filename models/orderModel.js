@@ -1,19 +1,14 @@
 const mongoose = require('mongoose');
 
 const orderSchema = new mongoose.Schema({
-  category: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Dish',
-    required: [true, 'An Order must belong to a dish!'],
+  items: {
+    type: Array,
+    required: [true, 'An Order must have items!'],
   },
   user: {
     type: mongoose.Schema.ObjectId,
     ref: 'User',
     required: [true, 'An Order must belong to a user!'],
-  },
-  price: {
-    type: Number,
-    require: [true, 'An Order must have a price!'],
   },
   createdAt: {
     type: Date,
