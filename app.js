@@ -102,7 +102,7 @@ app.use((req, res, next) => {
   if (req.originalUrl === '/webhook') {
     next(); 
   } else {
-    bodyParser.json({ limit: "10kb" })(req, res, next);
+    bodyParser.json()(req, res, next);
   }
 });
 app.use(bodyParser.urlencoded({ extended: false }));
