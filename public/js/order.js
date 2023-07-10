@@ -286,9 +286,8 @@ function DisplayLocalOrder() {
   }
 }
 
-function DisplayOrder(title, price, imageSrc, quantity) {
+function DisplayOrder(title, price, imageSrc, quantity, status) {
   var orderItems = document.getElementsByClassName('order-items')[0];
-
   var orderRow = document.createElement('div')
   orderRow.classList.add('order-row');
   var orderRowContents = `
