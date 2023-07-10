@@ -178,7 +178,8 @@ const fulfillOrder = async (user_session) => {
   });
   console.log(items);
   console.log('Where is error Going to mongoDB');
-  const user = (await User.findOne({ email: user_session.customer_email })).id;
+  // const user = (await User.findOne({ email: user_session.customer_email })).id;
+  const user = (await User.findOne({ email: session.customer_details.email })).id;
   console.log('user',user)
   let order = await Order.findOne({ user });
   if (!order) {
