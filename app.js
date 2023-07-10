@@ -22,7 +22,9 @@ const dishRouter = require("./routes/dishRoutes");
 const reviewRouter = require("./routes/reviewRoutes");
 const viewRouter = require("./routes/viewRoutes");
 // const orderRouter = require("./routes/orderRoutes");
-// const { webhookCheckout } = require("./controllers/orderController");
+const User = require("./models/userModel");
+const Order = require("./models/orderModel");
+
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
 
@@ -166,12 +168,28 @@ app.post("/create-checkout-session", async (req, res) => {
 
 
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
-
-let paymentStatus;
-
-const fulfillOrder = (status) => {
-  paymentStatus = status;
-  console.log(paymentStatus);
+const fulfillOrder = async (user_session) => {
+  let items = [];
+  const id = user_session.id;
+  const session = await stripe.checkout.sessions.retrieve(id, {
+    expand: ["line_items"]
+  });
+  session.line_items.data.forEach(item => {
+    items.push({
+      name: item.description,
+      image: item.price.product.images[0],
+      price: item.amount_total,
+      quantity: item.quantity
+    })
+  });
+  const user = (await User.findOne({ email: user_session.customer_email })).id;
+  let order = await Order.findOne({ user });
+  if (!order) {
+    order = await Order.create({ user, items });
+  } else {
+    order.items = order.items.concat(items);
+    await order.save();
+  }
 };
 
 app.post('/webhook', express.raw({ type: 'application/json' }), (request, response) => {
@@ -190,8 +208,7 @@ app.post('/webhook', express.raw({ type: 'application/json' }), (request, respon
   switch (event.type) {
     case 'checkout.session.completed':
       const checkoutSessionCompleted = event.data.object;
-      let status =  true';
-      fulfillOrder(status);
+      fulfillOrder(checkoutSessionCompleted);
       break;
     default:
       console.log(`Unhandled event type ${event.type}`);
