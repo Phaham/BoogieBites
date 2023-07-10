@@ -163,9 +163,9 @@ const fulfillOrder = async (user_session) => {
     expand: ["line_items"]
   });
   /////////////////////////////////
-  console.log(session);
-  console.log(session.line_items); 
-  console.log(session.line_items.data);
+  console.log('session',session);
+  console.log('line_items',,session.line_items); 
+  console.log('line_items-data',session.line_items.data);
   ////////////////////////////////////
   session.line_items.data.forEach(item => {
     items.push({
@@ -175,7 +175,9 @@ const fulfillOrder = async (user_session) => {
       quantity: item.quantity
     })
   });
+
   const user = (await User.findOne({ email: user_session.customer_email })).id;
+    console.log('user',user)
   let order = await Order.findOne({ user });
   if (!order) {
     order = await Order.create({ user, items });
