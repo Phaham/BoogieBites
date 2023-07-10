@@ -155,18 +155,6 @@ app.post("/create-checkout-session", async (req, res) => {
   res.json({ id: session.id });
 });
 
-// app.get('/paymentSuccess', async (req, res) => {
-//   // const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
-//   // const customer = await stripe.customers.retrieve(session.customer);
-//   // console.log(customer.name)
-//   // res.send(`<html><body><h1>Thanks for your order, ${customer.name}!</h1></body></html>`);
-
-//   res.status(200).render('paymentSuccess', {
-//     title: 'payment_success',
-//   });
-// });
-
-
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 const fulfillOrder = async (user_session) => {
   let items = [];
@@ -214,9 +202,6 @@ app.post('/webhook', express.raw({ type: 'application/json' }), (request, respon
       console.log(`Unhandled event type ${event.type}`);
   }
   response.send();
-});
-app.get('/my-orders', async (req, res) => {
-  res.status(200).render('my_orders', paymentStatus);
 });
 //////////////////////////////////////////////////////////////////////////////////////
 
