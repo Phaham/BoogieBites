@@ -150,10 +150,6 @@ if (checkoutButton) {
       })
     }
 
-    let existingItems = localStorage.getItem('myOrdersKey');
-    let updatedOrders = existingItems ? JSON.parse(existingItems) : [];
-    updatedOrders = updatedOrders.concat(items);
-    localStorage.setItem("myOrdersKey", JSON.stringify(updatedOrders));
     localStorage.removeItem(LocalCart.key);
 
     fetch("/create-checkout-session", {
@@ -277,8 +273,9 @@ if (isOrderDefined) {
 
 //order
 function DisplayLocalOrder() {
-  var items = JSON.parse(localStorage.getItem("myOrdersKey"));
-  if (items === null) return
+  const items_data = document.getElementById('order_items').dataset.userItems;
+  const items = JSON.parse(items_data);
+  if (items === null || items == undefined) return
   var size = items.length;
 
   for (var i = 0; i < size; i++) {
@@ -287,7 +284,8 @@ function DisplayLocalOrder() {
     var quantity = item.quantity;
     var price = item.price;
     var img = item.image;
-    DisplayOrder(title, price, img, quantity);
+    var status = 'SUCCESS';
+    DisplayOrder(title, price, img, quantity, status);
   }
 }
 
@@ -308,10 +306,10 @@ function DisplayOrder(title, price, imageSrc, quantity) {
   `
   orderRow.innerHTML = orderRowContents
   orderItems.append(orderRow)
-  if (status != 'FAILED') {
-    const btnStatus = document.querySelector('.btn-status');
-    btnStatus.style.backgroundColor = '#398552';
-  }
+  // if (status != 'FAILED') {
+  //   const btnStatus = document.querySelector('.btn-status');
+  //   btnStatus.style.backgroundColor = '#398552';
+  // }
 }
 
 if (checkoutButton) {
