@@ -308,8 +308,15 @@ function DisplayOrder(title, price, imageSrc, quantity) {
   // }
 }
 
+var order_btn = document.querySelectorAll('.add-to-cart');
+order_btn.forEach((btn)=>{
+  disable(btn);
+})
 if (checkoutButton) {
   DisplayLocal()
+  order_btn.forEach((btn)=>{
+    enable(btn);
+  })
 }
 
 function DisplayLocalCart(title, price, imageSrc, quantity, id) {
