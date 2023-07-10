@@ -8,10 +8,7 @@ block content
           span.order-title.order-header.order-column ITEM
           span.order-price.order-header.order-column PRICE
           span.order-quantity.order-header.order-column QTY
-          if paymentStatus
-            span(data-status=`${paymentStatus}`)#status.order-status.order-header.order-column STATUS
-          else 
-            span(data-status=`FAILED`)#status.order-status.order-header.order-column STATUS
-
+          if items
+            span(data-user-items=JSON.stringify(items))#status.order-status.order-header.order-column STATUS
         .order-items
 
