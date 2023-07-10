@@ -15,7 +15,7 @@ router.get('/category/:slug', authController.isLoggedIn, viewsController.getCate
 router.get('/login', authController.isLoggedIn, viewsController.getLoginForm);
 router.get('/signup', authController.isLoggedIn, viewsController.getSignUpForm);
 router.get('/dashboard', authController.protect, viewsController.getAccount);
-// router.get('/my-orders', authController.protect, viewsController.getMyOrders);
+router.get('/my-orders', authController.protect, viewsController.getMyOrders);
 
 router.get('/email/welcome', viewsController.welcomeEmail);
 
