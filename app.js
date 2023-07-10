@@ -171,7 +171,8 @@ const fulfillOrder = async (user_session) => {
     items.push({
       name: item.description,
       // image: item.price.product.images[0],
-      image: '/img/dishes/apple_pie1.webp',
+      image: item.price.product.image,
+      // image: '/img/dishes/apple_pie1.webp',
       price: item.amount_total,
       quantity: item.quantity
     })
