@@ -9,6 +9,6 @@ block content
           span.order-price.order-header.order-column PRICE
           span.order-quantity.order-header.order-column QTY
           if items
-            span(data-user-items=JSON.stringify(items))#status.order-status.order-header.order-column STATUS
+            span#order_items(data-user-items=JSON.stringify(items)).order-status.order-header.order-column STATUS
         .order-items
 
