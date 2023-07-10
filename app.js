@@ -162,6 +162,11 @@ const fulfillOrder = async (user_session) => {
   const session = await stripe.checkout.sessions.retrieve(id, {
     expand: ["line_items"]
   });
+  /////////////////////////////////
+  console.log(session);
+  console.log(session.line_items); 
+  console.log(session.line_items.data);
+  ////////////////////////////////////
   session.line_items.data.forEach(item => {
     items.push({
       name: item.description,
