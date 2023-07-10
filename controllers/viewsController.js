@@ -110,7 +110,7 @@ exports.getTestCard= (req, res) => {
   });
 };
 
-exports.getMyOrders= (req, res) => {
+exports.getMyOrders= async(req, res) => {
   const order = await Order.findOne({ user: req.user.id });
   // console.log(items)
   if(order){
