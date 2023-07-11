@@ -117,6 +117,12 @@ app.use("/api/v1/reviews", reviewRouter);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
+let userEmail = ''
+app.post('/user-email', (req, res) => {
+  const { useremail } = req.body;
+  userEmail = useremail;
+  res.sendStatus(200);
+});
 
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY
 const stripe = require('stripe')(stripeSecretKey);
@@ -145,7 +151,7 @@ app.post("/create-checkout-session", async (req, res) => {
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
-    customer_email: req.user.email,
+    customer_email: userEmail,
     line_items: lineItems,
     mode: "payment",
     // success_url: `${req.protocol}://${req.get("host")}/paymentSuccess`,
