@@ -177,9 +177,10 @@ const fulfillOrder = async (user_session) => {
   //     quantity: item.quantity
   //   })
   // });
-  (async () => {
+  // (async () => {
   for (const item of session.line_items.data) {
     const product = await stripe.products.retrieve(item.price.product);
+    console.log('productFrom',product);
     const image = product.images[0];
 
     items.push({
@@ -189,7 +190,7 @@ const fulfillOrder = async (user_session) => {
       quantity: item.quantity,
     });
   }
-  })();
+  // })();
 
   console.log(items);
   console.log('Where is error Going to mongoDB');
