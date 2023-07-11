@@ -167,8 +167,6 @@ const fulfillOrder = async (user_session) => {
   console.log('line_items',session.line_items); 
   console.log('line_items-data',session.line_items.data);
   ////////////////////////////////////
-  const product = await stripe.products.retrieve(item.price.product);
-  const image = product.images[0];
   // session.line_items.data.forEach(item => {
   //   items.push({
   //     name: item.description,
