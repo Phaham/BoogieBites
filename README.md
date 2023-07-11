@@ -2,33 +2,28 @@
 
 A food ordering app with a REST API using MongoDB, Mongoose, Express and Stripe.
 
-[See Demo](https://boogiebites.onrender.com/)
+## Deployed Version
+Live demo (Feel free to visit) 👉 : https://boogiebites.onrender.com/
 
-<p align="center">
-  <a href="https://boogiebites.onrender.com/">
-    <img src="https://paste.pics/OR9O3" alt="Cover Image">
-  </a>
-</p>
-<p align="center">
-  <a href="https://boogiebites.onrender.com/">
-    <img src="https://paste.pics/OR9T6" alt="Cover Image">
-  </a>
-</p>
-<p align="center">
-  <a href="https://boogiebites.onrender.com/">
-    <img src="https://paste.pics/OR9TI" alt="Cover Image">
-  </a>
-</p>
-<p align="center">
-  <a href="https://boogiebites.onrender.com/">
-    <img src="https://paste.pics/OR9TR" alt="Cover Image">
-  </a>
-</p>
-<p align="center">
-  <a href="https://boogiebites.onrender.com/">
-    <img src="https://paste.pics/OR9TW" alt="Cover Image">
-  </a>
-</p>
+#### Home Page :
+![Home Page image](https://i2.paste.pics/OR9O3.png)
+
+#### Category Page :
+![Category Page image](https://i2.paste.pics/OR9T6.png)
+
+#### Recipe Page :
+![Recipe Page image](https://i2.paste.pics/OR9TI.png)
+
+#### Chat Feature:
+![chat_image](https://i2.paste.pics/OR9TR.png)
+
+#### Cart Feature :
+![Cart image](https://i2.paste.pics/OR9TW.png)
+
+#### Order Page :
+![Order Page_image](https://i2.paste.pics/ORA3J.png)
+<br>
+
 
 ## Key features
 
