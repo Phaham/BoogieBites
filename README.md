@@ -2,28 +2,31 @@
 
 A food ordering app with a REST API using MongoDB, Mongoose, Express and Stripe.
 
-[See Demo deployed on Render](https://node-travel-app.onrender.com/)
-<!-- 
-[See API documentation on Postman](https://documenter.getpostman.com/view/11993746/T17Ke7HH?version=latest) -->
+[See Demo](https://boogiebites.onrender.com/)
 
 <p align="center">
-  <a href="https://node-travel-app.onrender.com/">
-    <img src="screenshot.png" alt="See Demo deployed on Render">
+  <a href="https://boogiebites.onrender.com/">
+    <img src="https://paste.pics/OR9O3" alt="Cover Image">
   </a>
 </p>
 <p align="center">
-  <a href="https://node-travel-app.onrender.com/">
-    <img src="screenshot.png" alt="See Demo deployed on Render">
+  <a href="https://boogiebites.onrender.com/">
+    <img src="https://paste.pics/OR9T6" alt="Cover Image">
   </a>
 </p>
 <p align="center">
-  <a href="https://node-travel-app.onrender.com/">
-    <img src="screenshot.png" alt="See Demo deployed on Render">
+  <a href="https://boogiebites.onrender.com/">
+    <img src="https://paste.pics/OR9TI" alt="Cover Image">
   </a>
 </p>
 <p align="center">
-  <a href="https://node-travel-app.onrender.com/">
-    <img src="screenshot.png" alt="See Demo deployed on Render">
+  <a href="https://boogiebites.onrender.com/">
+    <img src="https://paste.pics/OR9TR" alt="Cover Image">
+  </a>
+</p>
+<p align="center">
+  <a href="https://boogiebites.onrender.com/">
+    <img src="https://paste.pics/OR9TW" alt="Cover Image">
   </a>
 </p>
 
