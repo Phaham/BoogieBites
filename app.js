@@ -167,7 +167,7 @@ const fulfillOrder = async (user_session) => {
     const product = await stripe.products.retrieve(item.price.product);
     console.log('productFrom',product);
     const image = product.images[0];
-
+    console.log(image)
     items.push({
       name: item.description,
       image: image,
@@ -180,6 +180,7 @@ const fulfillOrder = async (user_session) => {
   const user = (await User.findOne({ email: session.customer_details.email })).id;
   console.log('user',user)
   let order = await Order.findOne({ user });
+  console.log(order)
   if (!order) {
     order = await Order.create({ user, items });
   } else {
