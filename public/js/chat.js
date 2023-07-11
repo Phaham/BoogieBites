@@ -5,7 +5,10 @@ var user_photo = 'default_chat.jpg'
 
 var username = document.getElementById('access_name').dataset.userName;
 var userphoto = document.getElementById('access_photo').dataset.userPhoto;
-var useremail = document.getElementById('access_email').dataset.userEmail;
+var accessEmail = document.getElementById('access_email');
+if(accessEmail){
+    var useremail = accessEmail.dataset.userEmail;
+}
 
 fetch('/user-email', {
     method: 'POST',
