@@ -145,6 +145,7 @@ app.post("/create-checkout-session", async (req, res) => {
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
+    customer_email: req.user.email,
     line_items: lineItems,
     mode: "payment",
     // success_url: `${req.protocol}://${req.get("host")}/paymentSuccess`,
@@ -177,7 +178,7 @@ const fulfillOrder = async (user_session) => {
   }
 
   // const user = (await User.findOne({ email: user_session.customer_email })).id;
-  const user = (await User.findOne({ email: session.customer_details.email })).id;
+  const user = (await User.findOne({ email: session.customer_email })).id;
   console.log('user',user)
   let order = await Order.findOne({ user });
   console.log(order)
