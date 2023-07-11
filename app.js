@@ -167,16 +167,32 @@ const fulfillOrder = async (user_session) => {
   console.log('line_items',session.line_items); 
   console.log('line_items-data',session.line_items.data);
   ////////////////////////////////////
-  session.line_items.data.forEach(item => {
+  const product = await stripe.products.retrieve(item.price.product);
+  const image = product.images[0];
+  // session.line_items.data.forEach(item => {
+  //   items.push({
+  //     name: item.description,
+  //     // image: item.price.product.images[0],
+  //     image: item.price.product.image,
+  //     // image: '/img/dishes/apple_pie1.webp',
+  //     price: item.amount_total,
+  //     quantity: item.quantity
+  //   })
+  // });
+  (async () => {
+  for (const item of session.line_items.data) {
+    const product = await stripe.products.retrieve(item.price.product);
+    const image = product.images[0];
+
     items.push({
       name: item.description,
-      // image: item.price.product.images[0],
-      image: item.price.product.image,
-      // image: '/img/dishes/apple_pie1.webp',
+      image: image,
       price: item.amount_total,
-      quantity: item.quantity
-    })
-  });
+      quantity: item.quantity,
+    });
+  }
+  })();
+
   console.log(items);
   console.log('Where is error Going to mongoDB');
   // const user = (await User.findOne({ email: user_session.customer_email })).id;
