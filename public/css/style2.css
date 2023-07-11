@@ -856,7 +856,7 @@ span.order-item-quantity.order-column {
 }
 .order-title {
   padding-right: 24rem;
-  margin-right: 0;
+  margin-right: 5rem;
 }
 .order-item {
   display: flex;
