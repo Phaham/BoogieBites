@@ -63,7 +63,7 @@ Live demo (Feel free to visit) 👉 : https://boogiebites.onrender.com/
 
 - hashing passwords with bcryptjs.
 - building a complete authentication workflow with JWT: user sign up, log in and reset password via email.
-- protecting routes and restricting access according to user role (user, guide, lead guide, admin).
+- protecting routes and restricting access according to user role (user, reviewer, admin).
 
 ## Security
 
