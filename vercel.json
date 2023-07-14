@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "./public/js/bundle.js",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "server.js" }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "scripts": {
+    "build": "npm run build:js",
+    "install": "npm install"
+  }
+}
