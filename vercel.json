@@ -10,9 +10,9 @@
     {
       "src": "/(.*)",
       "dest": "/"
-    },
+    }
   ],
-   "env": {
+  "env": {
     "NODE_ENV": "production"
-  },
+  }
 }
