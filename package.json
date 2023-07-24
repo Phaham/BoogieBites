@@ -69,6 +69,6 @@
     "prettier": "^1.17.0"
   },
   "engines": {
-    "node": "^10"
+    "node": "18.x"
   }
 }
