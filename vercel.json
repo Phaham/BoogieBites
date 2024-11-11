@@ -45,9 +45,6 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "PORT": "3000",
-    "DATABASE": "@your_db_connection_string",
-    "STRIPE_SECRET_KEY": "@stripe_secret_key",
-    "STRIPE_WEBHOOK_SECRET": "@stripe_webhook_secret"
+    "PORT": "3000"
   }
 }
