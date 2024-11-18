@@ -6,7 +6,7 @@
 Check out the live demo: [BoogieBites Live](https://boogiebites.onrender.com/)
 
 
-### process and Key features
+### Process and Key features
 
 - building a REST API with Express, logging requests with Morgan and sending JSend responses.
 - using the MVC (Model-View-Controller) architecture with separate routers.
