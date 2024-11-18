@@ -1,9 +1,10 @@
 # BoogieBites - Food Ordering and Recipe WebApp
+**BoogieBites** is a full-stack web application for ordering food and exploring recipes. It features a streamlined food ordering process, user authentication, and an integrated recipe collection. The application is built using Node.js, Express, and MongoDB, with additional features such as secure payment processing using Stripe and real-time chat-app using Socket.io.
 
-A food ordering app with a REST API using MongoDB, Mongoose, Express and Stripe.
 
 ## 🎥 Demo
 Check out the live demo: [BoogieBites Live](https://boogiebites.onrender.com/)
+
 
 ### process and Key features
 
@@ -39,8 +40,9 @@ Check out the live demo: [BoogieBites Live](https://boogiebites.onrender.com/)
 - **Mongoose**: MongoDB object modeling.
 - **Stripe**: Payment processing.
 
-### Real-time Chat
+### Real-time Chat and Email
 - **Socket.io**: Real-time chat app for users experience sharing.
+- Sendgrid service used for sending Welcome and Forgot Password mails
 
 ### Security
 - **Helmet**: Secure HTTP headers.
@@ -62,7 +64,7 @@ Check out the live demo: [BoogieBites Live](https://boogiebites.onrender.com/)
 1. Clone the repository:
    ```
    git clone https://github.com/Phaham/BoogieBites-.git
-   cd BoogieBites-
+   cd BoogieBites
    ```
 
 2. Install dependencies:
@@ -153,7 +155,7 @@ BoogieBites-/
 - `GET /api/v1/recipes/:id` - Get recipe by ID
 
 
-## Error handling
+#### Error handling
 
 - handling operational errors and programmer errors with a middleware wrapping all async controllers.
 - sending complete error messages in development and user-friendly messages in production.
@@ -161,7 +163,7 @@ BoogieBites-/
 - debugging with ndb.
 
 
-## Security
+#### Security
 
 - implementing security best practices with express-rate-limit, helmet and CORS.
 - sending tokens in secure cookies and reading them with cookie-parser.
@@ -202,4 +204,3 @@ Contributions are welcome! Please follow these steps:
 
 #### Order Page :
 ![Order Page_image](https://i2.paste.pics/ORA3J.png)
-<br>
