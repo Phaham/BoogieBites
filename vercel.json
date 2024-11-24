@@ -15,10 +15,7 @@
       "src": "/api/(.*)",
       "dest": "/server.js"
     },
-    {
-      "src": "/socket.io/(.*)",
-      "dest": "/server.js"
-    },
+
     {
       "src": "/create-checkout-session",
       "dest": "/server.js"
